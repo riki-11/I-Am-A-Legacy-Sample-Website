@@ -1,0 +1,1143 @@
+body,h2,h3,h4,h5,h6 {
+    font-family: "Lato", sans-serif;
+}
+
+.w3-bar, h1, button, #navmenu, #events h2 {
+    font-family: "Raleway", sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.w3-top {
+    z-index: 2;
+}
+
+.w3-bar {
+    background-color: #151F90;
+    color: white;
+    font-weight: 600;
+}
+
+.w3-jumbo {
+    font-size: 80px !important;
+}
+
+.w3-content {
+    max-width: 1300px;
+    position: relative;
+    z-index: 1;
+}
+
+#logo {
+    float: left;
+    height: 120px;
+    max-width: 100%;
+}
+
+/* CSS for Curves */
+.curved {
+    position: relative;
+}
+
+/* CSS for main content of the page */
+.main-content{
+    padding-top: 123px;
+}
+
+.main-donatepage, .main-signup-page{
+  padding-top: 180px;
+}
+
+.main-donatepage input, .main-signup-page input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 15px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+    
+.main-donatepage .form-inline, .main-signup-page .form-signup{
+    width: 50%;
+    margin: 0 auto;
+    text-align:left;
+    padding-bottom: 75px;
+}
+
+.main-donatepage input[type=submit], .main-signup-page input[type=submit]{
+    background-color: #1966F9;
+    color:white;
+}
+
+input[type=reset]{
+    background-color: rgb(212, 12, 12); /*what color do you guys think this should be*/
+    color:white;
+}
+
+.main-donatepage h1, .main-donatepage h6, .main-signup-page h1, .main-signup-page h6 {
+    text-align: center;
+}
+
+.figma {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.main-signup-page .form-signup img{
+  height: 100%;
+  width:100%;
+  padding-bottom: 10px;
+}
+
+/* For the image slider on the front page */
+#slider {
+    height: 70vh;
+    width: 100vw;
+    position: relative;
+    text-shadow: 3px 3px 10px #3d3c3c;
+    overflow: hidden;
+}
+
+#slider figure {
+    position: relative;
+    width: 400%;
+    margin: 0;
+    left: 0;
+    animation: 10s slider infinite;
+}
+
+#slider figure img {
+    width: 25%;
+    float: left;
+    position: relative;
+} 
+
+img[alt="forest"] {
+    bottom: 17em;
+}
+
+#sowing-imgs img {
+    border-radius: 8px;
+    box-shadow: 2.5px 2.5px 7px gray;
+}
+
+@keyframes slider {
+    0% {left: 0;}
+    25% {left: 0;}
+    30% {left: -100%;}
+    50% {left: -100%;}
+    55% {left: -200%;}
+    75% {left: -200%;}
+    80% {left: -300%}
+    100% {left: -300%;}
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.38);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.overlay h1 {
+    color: white !important;
+}
+
+#about-content .overlay {
+    height: 90%;
+}
+
+#about-content .overlay h1 {
+    font-size: 50px;
+    margin: 1em;
+    text-align: center;
+}
+
+#grid-1 hr {
+    margin: 0;
+}
+
+#grid-2 {
+    background-color: #D1D6E9;
+    padding: 150px 16px;
+}
+
+#grid-2 .w3-half:nth-child(1) {
+    padding-right: 10px;
+}
+
+#grid-2 .w3-half:nth-child(2) {
+    padding-right: 20px;
+}
+
+
+#grid-2 .w3-button:hover {
+    background-color: transparent !important;
+    color: white!important;
+}
+
+.gradient-overlay {
+    position: relative;
+}
+
+.gradient-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+}
+
+.img-panel {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2.5px 2.5px 7px gray;
+}
+
+#grid-2 img {
+    border-radius: 40px;
+}
+
+.btn-1-container {
+    border: 2.5px solid white;
+    border-radius: 8px;
+    text-align: center;
+    width: 140px;
+    height: 46px;
+    padding: 8.5px;
+    transition: 0.3s;
+}
+
+.btn-1-container:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2.5px solid rgba(0, 0, 0, 0);
+}
+
+.btn-1 {
+    font-size: 16.5px;
+    text-decoration: none;
+    color: white;
+}
+
+/* To make an entire block link to an "a" tag */
+.text-overlay {
+    color: white;
+    text-shadow: 3px 3px 6px gray;
+    width: 100%;
+    height: 100%;
+}
+
+.text-overlay h1 {
+    font-size: 55px;
+}
+
+.text-overlay h2 {
+    font-size: 50px;
+}
+
+.text-overlay span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#advocacy {
+    margin-bottom: 12px;
+}
+
+/* Makes it so that the image resizes responsively but can only grow until 450px in height */
+#advocacy img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+}
+
+#advocacy .gradient-overlay::after {
+    /*
+        Just placed these gradient combinations here in case I change my mind
+        #bdc3c7, #2c3e50
+        Royal Blue: #141E30 #243B55 (340deg 0.35 opacity)
+        Friday: #83a4d4 #b6fbff (150deg 0.30)
+        Moss: #134E5E #71B280
+    */
+    /* NOTE TO SELF: maybe can add a transition on hover? */
+    background-image: linear-gradient(150deg, #134E5E, #71B280);
+    opacity: 0.35;
+}
+
+#events {
+    /* Placed this so that all the images within the carousel will have the same height */
+    height: 365px;
+}
+
+#events img, #donate img {
+    max-height: 365px;
+}
+
+#events img {
+    animation: 1s fade ease;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#events .w3-button {
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#events .w3-button:hover {
+    font-size: 2.1rem;
+    text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.7);
+}
+
+#events .text-overlay, #donate .text-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#events .gradient-overlay::after {
+    /*
+        Tested Colors: 
+            150deg, #2c3e50, #3498db
+     */
+    background-image: linear-gradient(150deg, #2c3e50, #3498db);
+    opacity: 0.4;
+}
+
+#donate .gradient-overlay::after {
+    /*
+        Tested Colors: 
+            300 deg, #8e9eab, #eef2f3 0.5
+            340deg, #00467F, #A5CC82  0.4
+    */
+    background-image: linear-gradient(340deg, #00467F, #A5CC82);
+    opacity: 0.4;
+}
+
+.w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.carousel-dot {
+    border: 1px solid #ffffff70;
+}
+
+/* Grid-2 Curve SVG CSS */
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 167px;
+}
+
+.wave .shape-fill {
+    fill: #FFFFFF;
+}
+
+footer {
+    background-color: #151F90;
+    color: white;
+    padding-top: 40px !important;
+}
+
+footer h5 {
+    margin: 10px 1.2em;
+}
+
+footer input {
+    margin: 5px 0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#newsletter-submit {
+    position: relative;
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    border: 1px solid white;
+    background-color: #151F90;
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+}
+
+#newsletter-submit:hover, #newsletter-submit:active {
+    cursor: pointer;
+    width: 100.7%;
+    box-shadow: 1px 1px 3px gray;
+    background-color: white;
+    color: #151F90;
+}
+
+/* responsive design for smartphone screen sizes only */
+@media screen and (min-width: 320px) and (max-width: 840px){
+    .w3-jumbo {
+        font-size: 30px !important;
+        text-align: center;
+    }
+
+    body,h1,h2,h3,h4,h5,h6 {
+        text-align: center;
+    }
+
+    #grid-2 {
+        padding-top: 170px;
+    }
+
+    img[alt="forest"] {
+        bottom: auto;
+    }
+
+    img[alt="volcano"] {
+        bottom: auto;
+    } 
+    /*
+        NOTE: add responsiveness for these stuff
+
+        .text-overlay h1 {
+            font-size: 25px;
+        }
+        images in #grid-2 {
+            center them all at a certain px width
+        }
+    */
+    img {
+        width: 320px;
+        height: 300px;
+    }
+
+    #slider figure img {
+        width: 25%;
+    } 
+
+    footer input {
+        text-align: center;
+    }
+
+    .main-signup-page .form-signup img{
+        height: 200%;
+    }
+
+    /* For What We Do Section icons, remove hidden divs from the body */
+    .hidden-text {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 840px) and (orientation: portrait){
+  #slider {
+    height: 35vh;
+  } 
+  #sowing-imgs img {
+    margin-top: 5px;
+    margin-bottom: 20px; 
+  }
+
+  .main-donatepage .form-inline, .main-signup-page .form-signup{
+    width: 75%;
+    margin: 0 auto;
+    text-align:left;
+    padding-bottom: 75px;
+  }
+
+  .btn-1-container{
+    display: block;
+    width: auto;
+    height: auto;
+    float: none;
+  }
+}
+
+.social-icons {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper {
+    display: inline-flex;
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+    color: #151F90;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #46c1f6;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff;
+}
+
+.Vid-Title,.Vid-Desc{
+  text-align: center;
+}
+
+
+.main-advocacy{
+    text-align: center;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    color: white;
+    overflow: hidden;
+    background: rgb(182, 180, 180, 0.8);  /* fallback for old browsers */
+    background: linear-gradient(rgba(182, 180, 180, 0.8), rgba(53, 83, 252, 0.8)), url("images/deforestation.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(182, 180, 180, 0.8), rgba(53, 83, 252, 0.8)), url("images/deforestation.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.why-area{
+  padding-bottom: 90px;
+}
+
+#de-title{
+  padding-top: 60px;
+}
+
+#deforest-title{
+  color: #163DA6;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.aspect{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.aspect-row{
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; 
+    justify-content: space-between;
+    text-align: left;
+    flex-direction: row;
+    column-gap: 10px;
+    padding-top: 30px;
+}
+
+.aspect-content{
+  flex-basis: 100%;
+}
+
+.stat{
+  text-align: center;
+  padding-top: 64px;
+  padding-bottom: 128px;
+  /*placeholder */
+  background-image: url("images/volcano.jpg");
+  box-shadow:inset 0 0 0 2000px rgba(100, 100, 100, 0.589);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  background-position: center;
+}
+
+.data-row{
+  min-height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: stretch;
+  flex-wrap: wrap;
+  display: flex; 
+  justify-content: space-between;
+  padding-top: 24px;
+  width: 80%;
+}
+
+.data-content{
+  margin-right: 30px;
+  margin-left: 30px;
+  flex: 1;
+}
+
+.title{
+  color: #195BF2;
+  display: inline-block;
+}
+
+.title:after {
+  content: '';
+  display: block;
+  border-top: 6px solid rgb(179, 179, 179);
+  margin-top: 0.5em;
+}
+
+.data-title{
+  font-weight: 600;
+  color: navy;
+  flex: 1;
+}
+
+.data-quant{
+  flex:1;
+}
+
+.aspect-claim{
+  text-align: left;
+  font-weight: bold;
+}
+
+.banner-container{
+  padding-top: 56px;
+  padding-bottom: 10px;
+}
+
+.banner{
+  font-size: 36px;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
+
+.banner-desc{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex; 
+}
+
+#banner-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-box{
+  margin: auto;
+  width: 50%;
+}
+
+.advocacy-part2{
+  padding-bottom: 128px;
+  padding-top: 24px;
+}
+
+#banner-what-to{
+  background-color: #195BF2;
+  color:white;
+  margin-bottom: 50px;
+}
+
+.bottom-arrow:after{
+    content:'';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: 25px solid #195BF2;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.bottom-arrow {
+      border-bottom: 5px solid #195BF2;
+      padding-top: 30px;
+}
+
+
+.video-box{
+  display: flex;
+  margin: 0 auto;
+  width: 75%;
+  height: auto;
+}
+
+.fb-video{
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+.vid-text{
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  flex-wrap: wrap;
+}
+
+.vid-text h2{
+  color: #163DA6;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
+}
+
+.vid-text h3{
+  color: #195BF2;
+}
+
+#vid-btn{
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: flex-start;
+}
+
+.btn-2-container {
+  margin-top: auto; 
+  text-align: center;
+  width: 140px;
+  height: 46px;
+  padding: 8.5px;
+  transition: 0.3s;
+  background-color:#1966F9;
+  position: relative;
+  left:0;
+}
+
+.btn-2-container:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2.5px solid rgba(0, 0, 0, 0);
+}  
+  
+.btn-2 {
+  font-size: 16.5px;
+  text-decoration: none;
+  color: white;
+}
+
+.card-container{
+  padding-top: 75px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.advocacy-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 24px;
+}
+.grid-item {
+  background-color: #D1D6E9;
+  text-align: left;
+  box-shadow: 0 1px 8px rgb(0 0 0 / 16%);
+  min-height: 600px;
+  border-radius: 4px;
+  position: relative;
+  border: 1px solid #E5E9f5;
+}
+
+.grid-item:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.grid-item h3{
+  color: #163DA6;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
+  padding-top: 20px;
+  padding: 2px 16px;
+}
+
+.grid-item p{
+  padding: 2px 16px;
+}
+
+.grid-img{
+  object-fit: cover;
+  width: 100%;
+  height: 65%;
+  position: relative;
+}
+
+.advo-img-btn{
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-3-container {
+  text-align: center;
+  width: 140px;
+  height: 46px;
+  transition: 0.3s;
+  background-color:#1966F9;
+  position: absolute;
+  line-height: 1;
+  padding: 10px 20px;
+  right: 6px;
+  bottom: 5px;
+  left: auto;
+  margin: 0;
+}
+
+.btn-3-container:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2.5px solid rgba(0, 0, 0, 0);
+}  
+  
+.btn-3{
+  font-size: 16.5px;
+  text-decoration: none;
+  color: white;
+}
+
+/* CSS for about.html page */
+.large-background {
+    width: 100%;
+    height: 90vh;
+
+    background-image: url("images/legacy-5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about-content h1 {
+    color: #163DA6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 45px;
+}
+
+#about-content section {
+    padding-top: 64px;
+}
+
+#vision-mission {
+    background-color: #D1D6E9;
+}
+
+#vision-mission h5 {
+    padding: 10px 2em;
+}
+
+.icon {
+    height: auto;
+}
+
+#vision-mission .icon {
+    max-width: 40%;
+    filter: drop-shadow(7px 7px 1px #7386e670);
+}
+
+.wave-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-2 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 81px;
+    transform: rotateY(180deg);
+}
+
+.wave-2 .shape-fill {
+    fill: #D1D6E9;
+}
+
+#beginning-img {
+    padding: 2.5em;
+}
+
+#what-we-do {
+    background-color: #D1D6E9;
+}
+
+.what-we-do-info {
+    text-align: left;
+    padding-left: 0.7em;
+}
+
+#what-we-do h2 {
+    color: #2160C8;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 27px;
+}
+
+#what-we-do .w3-content > div:not(:first-child) {
+    margin-bottom: 3em;
+}
+
+@media screen and (min-width: 320px) and (max-width: 700px) {
+    .what-we-do-info {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    #what-we-do .w3-content > div {
+        margin-bottom: 3em;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .what-we-do-info h2, .what-we-do-info h5 {
+        text-align: left;
+    }
+}
+
+#what-we-do .icon {
+    width: auto;
+    position: relative;
+}
+
+#what-we-do .icon[alt="green-earth"] {
+    width: 163px;
+    bottom: 29%;
+    right: 9.75%;
+}
+
+.icon[alt="leadership"] {
+    left: 1em;
+}
+
+.icon[alt="handshake"] {
+    top: 0.5em;
+}
+
+.bg-circle, .team-bg {
+    /* inline-block allows the span to show up even w/o content */ 
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.bg-circle {
+    /* note: maybe change the height and width to 165 px */
+    height: 135px;
+    width: 135px;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hidden-text {
+    visibility: hidden;
+}
+
+.wave-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-3 svg {
+    position: relative;
+    display: block;
+    width: calc(102% + 1.3px);
+    height: 69px;
+}
+
+.wave-3 .shape-fill {
+    fill: #FFFFFF;
+}
+
+#team {
+    margin-bottom: 64px;
+}
+
+#team h4 {
+    color: #2160C8;
+    font-weight: bold;
+}
+
+.team-bg {
+    /* Note: eventually change the height to relative units for responsiveness */
+    height: 275px;
+    width: 275px;
+    background-color: #D1D6E9;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.team-image {
+    width: 100%;
+    height: auto;
+}
+
+.wave-4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-4 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 126px;
+}
+
+.wave-4 .shape-fill {
+    fill: #D1D6E9;
+}
+
+/*get inovlved page*/
+.img-box{
+  position: relative;
+  object-fit: cover;
+  overflow: hidden;
+  background-color: black;
+}
+
+#legacy-img{
+  height: 720px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  opacity: 0.45;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 32px;
+  font-size: 120px;
+  color: white;
+  z-index: 1;
+}
+
+#legacy-h1{
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  color: #163DA6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
