@@ -11,7 +11,8 @@ h1 {
 }
 
 .w3-top {
-    z-index: 2;
+    /* Just testing out for Git merge */
+    z-index: 3;
 }
 
 .w3-bar {
