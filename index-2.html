@@ -14,23 +14,121 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins&family=Raleway:wght@400;500;600;700&family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Just starting over from scratch for the new index page  -->
 
-    <!-- Navbar -->
-    <section id="header">
-        <div class="w3-top w3-mobile">
-            
+    
+    <section id="hero">
+        <!-- Navbar -->
+        <!-- Possible thing to add: make the navbar have a fixed position then solid background when you scroll down instead of disappearing -->
+        <div id="header">
+            <div class="navbar transparent w3-bar w3-mobile w3-left-align w3-large">
+                <a href="index.html"><img src="images/logo-edited.png" id="logo" class="navbar-item" alt="logo"></a>
+                <a href="about.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">About Us</a>
+                <a href="involved.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Get Involved</a>
+                <a href="advocacy.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Our Advocacy</a>
+                <a href="donate.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48">Donate</a>
+                <a href="signup.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 w3-right">Begin Your Legacy</a>
+                
+                <!-- Navbar for mobile -->
 
-            <!-- Mobile button for navbar -->
-            <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <!-- NOTE: navbar turns white when we press this, so we'll have to change it -->
+                <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
+                    <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
+                    <a href="involved.html" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
+                    <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
+                    <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
+                    <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="hero-text" class="w3-center w3-text-white">
+            <h1>YOU CAN MAKE AN IMPACT ON SOCIETY</h1>
+            <h4>Empower Young Filipinos. Help those in need. Protect our environment.</h4>
+            <a id="join-btn" class="transparent" href="signup.html">JOIN NOW</a>
         </div>
     </section>
 
-    <section id="hero">
+    <section id="home-content">
+        <div class="w3-content">
+            <div id="about-index" class="responsive-centered w3-padding-64">
+                <div class="container-overlap">
+                    <div id="about-left" class="bg-white container-shadow container-padding responsive-width">
+                        <h2 class="index-heading">The Youth Arm of Sowing Legacy Movement Inc.<hr></h2>
+                        <p>I Am A Legacy is composed of graduates from the Sowing Legacy Movement, Inc. Legacy Camps. We are a network of committed individuals working together to bring positive change through sowing and leaving legacies. We aim to empower the youth and marginalized communities by facilitating education, promoting volunteerism and environmental responsibility, and inspiring people to serve and love others.</p>
+                        <a class="card-btn transparent" href="about.html">ABOUT US</a> 
+                    </div>
+                    <div id="about-right" class="responsive-width">
+                        <img src="images/legacy-2.jpeg" class="w3-image img-shadow img-overlap" alt="legacy-camp">
+                    </div>
+                </div>
+            </div>
+            <div id="row-2" class="responsive-centered w3-padding-64">
+                <div id="involved-index" class="bg-white container-shadow container-padding">
+                    <img src="images/legacy-4.jpg" alt="events">
+                    <h2 class="index-heading">Join Our Events and Campaigns<hr></h2>
+                    <a class="card-btn transparent" href="involved.html">GET INVOLVED</a>
+                </div>
+                <div id="advocacy-index" class="bg-white container-shadow container-padding">
+                    <img src="images/save-forests.png" alt="save-forests">
+                    <h2 class="index-heading">Learn About Our Advocacy<hr></h2>
+                    <a class="card-btn transparent" href="advocacy.html">LEARN MORE</a>
+                </div>
+            </div>
+            <div id="donate-index" class="responsive-centered w3-padding-64">
+                <div class="container-overlap w3-padding-32">
+                    <div id="scholar-left" class="responsive-width">
+                        <img src="images/scholar.jpg" class="img-shadow img-overlap" alt="scholar">
+                    </div>
+                    <div id="scholar-right" class="bg-white container-padding container-shadow donate-padding responsive-width">
+                        <div class="w3-row">
+                            <!-- Use javascript to change the styling of these divs upon clicking 
+                            to turn text color into this hsl(0, 0%, 50%);-->
+                            <div class="w3-col l6 m6 s6 w3-center"><h3 class="inactive">One-time<hr></h3></div>
+                            <div class="w3-col l6 m6 s6 w3-center"><h3 class="active">Monthly<hr></h3></div>
+                        </div>
+                        <div class="w3-row">
+                            <div class="w3-col"><h2 class="index-heading w3-center">Support a Scholar<h2></div>
+                        </div>
+                        <div class="w3-row">
+                            <div class="w3-col l6 m6">
+                                <div class="donate-option active">
+                                    <div style="border: 1px solid black;" class="flex-2">icon</div>
+                                    <div style="border: 1px solid black;" class="flex-3">php 30</div>
+                                </div>
+                            </div>
+                            <div class="w3-col l6 m6">
+                                <div class="donate-option active">
+                                    <div class="flex-2">icon</div>
+                                    <div class="flex-3">php 90</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-row">
+                            <div class="w3-col"></div>
+                            <div class="w3-col"></div>
+                        </div>
+                        <div class="w3-row">
+                            <div class="w3-col"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-overlap w3-padding-32">
+                    <div id="tree-left" class="bg-white container-shadow">
+                        cool
+                    </div>
+                    <div id="tree-right"></div>
+                </div>
+
+            </div>
+        </div>
     </section>
-    
-    
+
+    <script src="script.js"></script>
 </body>
 </html>
