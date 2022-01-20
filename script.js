@@ -9,7 +9,39 @@ function myFunction() {
   }
 }
 
-/* Code for the slideshow/carousel */
+if (document.getElementById('home-content')) {
+  let scholarIntervals = document.querySelectorAll('[data-donation-interval][data-donation-type="scholar"]');
+  let scholarOptions = document.querySelectorAll('[data-donation-type="scholar"]:not([data-donation-interval])');
+  let treeIntervals = document.querySelectorAll('[data-donation-interval][data-donation-type="tree"]');
+  let treeOptions = document.querySelectorAll('[data-donation-type="tree"]:not([data-donation-interval]');
+
+  // Add an onclick event listener to all the donation options
+  setActive(scholarIntervals);
+  setActive(scholarOptions);
+  setActive(treeIntervals);
+  setActive(treeOptions);
+}
+
+// Function for adding active and inactive functionality to the donation card options
+function setActive(allOptions) {
+
+  allOptions.forEach(activeOption => {
+    activeOption.addEventListener('click', () => {
+
+      // First, set all the options to inactive
+      allOptions.forEach(option => {
+        option.classList.remove('active');
+        option.classList.add('inactive');
+      })
+
+      // Then set the one just clicked to active
+      activeOption.classList.remove('inactive');
+      activeOption.classList.add('active');
+    })
+  })
+}
+
+
 var slideIndex = 1;
 showDivs(slideIndex);
 

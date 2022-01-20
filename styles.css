@@ -46,6 +46,15 @@ hr {
     z-index: 1;
 }
 
+.no-margin {
+    margin: 0;
+}
+
+.auto-margin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width: 1530px) and (min-width: 1139px) {
     .w3-content {
         padding: 0px 20px;
@@ -116,7 +125,7 @@ input[type=reset]{
 }
 
 
-/* CSS for new index-2.html page */
+/* CSS for new index.html page */
 
 #header {
     padding-top: 15px;
@@ -127,7 +136,7 @@ input[type=reset]{
 #hero {
     min-height: 100vh;
     width: 100vw;
-    background: url("images/youth-medium.jpg") no-repeat center;
+    background: url("images/youth.jpg") no-repeat center;
 }
 
 .transparent {
@@ -151,15 +160,23 @@ input[type=reset]{
     text-shadow: 2px 2.5px 5px rgba(211, 209, 209, 0.3);
 }
 
+
+/* note to self: if we still have time, apply these classes to other classes to reduce css repetition */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
 #hero-text {
     max-width: 1350px;
     margin-right: auto;
     margin-left: auto;
     padding: 0.01rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 #hero-text h1 {
@@ -196,9 +213,6 @@ input[type=reset]{
 
 .container-overlap {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .img-shadow {
@@ -210,12 +224,11 @@ input[type=reset]{
 }
 
 .container-padding {
-    /* REMEMBER TO MAKE THIS RESPONSIVE !! */
     padding: 20px 35px 40px;
 }
 
 .index-heading {
-    font-size: clamp(2.5rem, 3vw, 3.3rem);
+    font-size: clamp(2.5rem, 4.5vw, 3.3rem);
     font-weight: 600;
     line-height: 59px;
     width: 95%;
@@ -276,7 +289,6 @@ input[type=reset]{
     padding: 10px 20px;
 }
 
-/* note to self: maybe find a way to avoid these by making a class for all the elements that need it */
 #about-right {
     flex: 2.5;
     height: auto;
@@ -311,20 +323,30 @@ img[alt="legacy-camp"] {
     padding: 10px 20px;
 }
 
-#scholar-right {
+#scholar-right, #tree-left {
     flex: 1.15;
 }
 
-#scholar-left {
+#scholar-right .w3-row {
+    margin-bottom: 10px;
+}
+
+#scholar-left, #tree-right {
     flex: 0.85;
 }
 
-img[alt="scholar"] {
+img[alt="scholar"], img[alt="sapling"] {
     width: 100%;
-    height: auto;
-    max-height: 450px;
+    height: 750px;
     object-fit: cover;
+}
+
+img[alt="scholar"] {
     margin-left: 50px;
+}
+
+img[alt="sapling"] {
+    margin-left: -50px;
 }
 
 #donate-index hr {
@@ -339,6 +361,11 @@ img[alt="scholar"] {
     border-color: #164db6;
 }
 
+.active:hover {
+    cursor: pointer;
+    transform: scale(1.01, 1.01);
+}
+
 .active hr {
     border: 1px solid #164DB6;
 }
@@ -346,10 +373,13 @@ img[alt="scholar"] {
 .inactive {
     color: #999;
     border-color: #999;
+    opacity: 0.5;
 }
 
-.inactive hr {
-    visibility: hidden;
+.inactive:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transform: scale(1.01, 1.01);
 }
 
 .donate-padding {
@@ -358,10 +388,57 @@ img[alt="scholar"] {
 
 .donate-option {
     display: flex;
-    border: 3px solid;
-    width: 80%;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.donate-info {
+    text-align: center;
+    color: hsla(198, 16%, 16%, 70%);
+    margin-top: 7px;
+}
+
+.donate-icon {
+    height: 128px;
+    width: 128px;
+}
+
+@media screen and (max-width: 1300px) {
+    .donate-icon {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.denomination {
+    font-family: "Lato", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.card-btn-donate {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-align: center;
+    background-color: #164db6;
+    box-shadow: 2px 2px 4px #00000061;
+    transition: 0.2s linear;
+}
+
+.card-btn-donate:hover {
+    background-color: #2a5fc6;
 }
 
 @media screen and (max-width: 1139px) {
@@ -408,58 +485,14 @@ img[alt="scholar"] {
     /* make a class for this!! */
     img[alt="scholar"] {
         margin: 0;
+        height: auto;
+        max-height: 450px;
     }
-
-    
-
-    /* add width: 90% to donate pages */
 }
 
 /* End of CSS for index-2.html page */
 
 
-/* For the image slider on the front page */
-#slider {
-    height: 70vh;
-    width: 100vw;
-    position: relative;
-    text-shadow: 3px 3px 10px #3d3c3c;
-    overflow: hidden;
-}
-
-#slider figure {
-    position: relative;
-    width: 400%;
-    margin: 0;
-    left: 0;
-    animation: 10s slider infinite;
-}
-
-#slider figure img {
-    width: 25%;
-    float: left;
-    position: relative;
-} 
-
-img[alt="forest"] {
-    bottom: 17em;
-}
-
-#sowing-imgs img {
-    border-radius: 8px;
-    box-shadow: 2.5px 2.5px 7px gray;
-}
-
-@keyframes slider {
-    0% {left: 0;}
-    25% {left: 0;}
-    30% {left: -100%;}
-    50% {left: -100%;}
-    55% {left: -200%;}
-    75% {left: -200%;}
-    80% {left: -300%}
-    100% {left: -300%;}
-}
 
 .overlay {
     position: absolute;
@@ -557,142 +590,6 @@ img[alt="forest"] {
     color: white;
 }
 
-/* To make an entire block link to an "a" tag */
-.text-overlay {
-    color: white;
-    text-shadow: 3px 3px 6px gray;
-    width: 100%;
-    height: 100%;
-}
-
-.text-overlay h1 {
-    font-size: 55px;
-}
-
-.text-overlay h2 {
-    font-size: 50px;
-}
-
-.text-overlay span {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-#advocacy {
-    margin-bottom: 12px;
-}
-
-/* Makes it so that the image resizes responsively but can only grow until 450px in height */
-#advocacy img {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-    max-height: 450px;
-}
-
-#advocacy .gradient-overlay::after {
-    /*
-        Just placed these gradient combinations here in case I change my mind
-        #bdc3c7, #2c3e50
-        Royal Blue: #141E30 #243B55 (340deg 0.35 opacity)
-        Friday: #83a4d4 #b6fbff (150deg 0.30)
-        Moss: #134E5E #71B280
-    */
-    /* NOTE TO SELF: maybe can add a transition on hover? */
-    background-image: linear-gradient(150deg, #134E5E, #71B280);
-    opacity: 0.35;
-}
-
-#events {
-    /* Placed this so that all the images within the carousel will have the same height */
-    height: 365px;
-}
-
-#events img, #donate img {
-    max-height: 365px;
-}
-
-#events img {
-    animation: 1s fade ease;
-}
-
-@keyframes fade {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-#events .w3-button {
-    font-size: 2rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    color: white;
-}
-
-#events .w3-button:hover {
-    font-size: 2.1rem;
-    text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.7);
-}
-
-#events .text-overlay, #donate .text-overlay {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-#events .gradient-overlay::after {
-    /*
-        Tested Colors: 
-            150deg, #2c3e50, #3498db
-     */
-    background-image: linear-gradient(150deg, #2c3e50, #3498db);
-    opacity: 0.4;
-}
-
-#donate .gradient-overlay::after {
-    /*
-        Tested Colors: 
-            300 deg, #8e9eab, #eef2f3 0.5
-            340deg, #00467F, #A5CC82  0.4
-    */
-    background-image: linear-gradient(340deg, #00467F, #A5CC82);
-    opacity: 0.4;
-}
-
-.w3-badge {
-    height: 13px;
-    width: 13px;
-    padding: 0;
-    cursor: pointer;
-}
-
-.carousel-dot {
-    border: 1px solid #ffffff70;
-}
-
-.wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 167px;
-}
-
-.wave .shape-fill {
-    fill: #FFFFFF;
-}
-
 footer {
     background-color: #151F90;
     color: white;
@@ -759,21 +656,7 @@ footer input {
 
     img[alt="volcano"] {
         bottom: auto;
-    } 
-    /*
-        NOTE: add responsiveness for these stuff
-
-        .text-overlay h1 {
-            font-size: 25px;
-        }
-        images in #grid-2 {
-            center them all at a certain px width
-        }
-    */
-
-    #slider figure img {
-        width: 25%;
-    } 
+    }
 
     footer input {
         text-align: center;
@@ -783,12 +666,10 @@ footer input {
         height: 200%;
     }
 
-    /* For What We Do Section icons, remove hidden divs from the body */
     .hidden-text {
         display: none;
     }
 
-    /* revised index.html page */
     #about-left h2, #about-left p {
         width: 100%;
     }
@@ -798,6 +679,42 @@ footer input {
   #slider {
     height: 35vh;
   } 
+
+  .btn-2-container {
+    margin: auto;
+  }
+
+  .btn-3-container {
+    position: relative;
+    margin: auto;
+  }
+
+  .grid-item p {
+    text-align: center;
+  }
+
+  .aspect-claim{
+    text-align: center;
+  }
+
+  .advocacy-grid {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 24px;
+  }
+
+  .aspect{
+    text-align: center;
+  }
+
+  .aspect-row {
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+  }
+
+  .card-container{
+    width: 80%;
+  }
 
   .grid-item2 {
   min-height: 200px;
@@ -989,7 +906,6 @@ footer input {
 #deforest-title{
   color: #163DA6;
   text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
-  width: 50%;
   margin: 0 auto;
 }
 
@@ -1001,7 +917,6 @@ footer input {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-    text-align: left;
 }
 
 .aspect-row{
@@ -1010,8 +925,6 @@ footer input {
     margin-right: auto;
     display: flex; 
     justify-content: space-between;
-    text-align: left;
-    flex-direction: row;
     column-gap: 10px;
     padding-top: 30px;
 }
@@ -1075,7 +988,6 @@ footer input {
 }
 
 .aspect-claim{
-  text-align: left;
   font-weight: bold;
 }
 
@@ -1140,7 +1052,6 @@ footer input {
 }
 
 .video-box{
-  display: flex;
   margin: 0 auto;
   width: 75%;
   height: auto;
@@ -1201,13 +1112,11 @@ footer input {
 
 .card-container{
   padding-top: 75px;
-  width: 75%;
   margin: 0 auto;
 }
 
 .advocacy-grid{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 24px;
 }
 .grid-item {
@@ -1227,8 +1136,6 @@ footer input {
 .grid-item h3{
   color: #163DA6;
   text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
-  padding-top: 20px;
-  padding: 2px 16px;
 }
 
 .grid-item p{
@@ -1255,13 +1162,11 @@ footer input {
   height: 46px;
   transition: 0.3s;
   background-color:#1966F9;
-  position: absolute;
   line-height: 1;
   padding: 10px 20px;
   right: 6px;
   bottom: 5px;
   left: auto;
-  margin: 0;
 }
 
 .btn-3-container:hover {
@@ -1551,6 +1456,41 @@ footer input {
 /*jump*/
 @media screen and (min-width: 768px) {
 
+  .video-box{
+    display: flex;
+  }
+
+  .aspect-claim{
+    text-align: left;
+  }
+
+  .grid-item h3{
+    padding: 2px 16px;
+    padding-top: 20px;
+  }
+
+  .btn-3-container {
+    position: absolute;
+    margin: 0;
+  }
+
+  .aspect-row{
+    flex-direction: row;
+    text-align: leff;
+  }
+
+  .aspect{
+    text-align: left;
+  }
+
+  #deforest-title{
+    width: 50%;
+  }
+
+  .advocacy-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .grid-img2{
     height: 90%;
   }
@@ -1601,6 +1541,10 @@ footer input {
   .ticket-box {
     max-width: 1200px;
   }
+
+  .card-container{
+    width: 75%;
+  }
 }
 
 .btn-4-container {
@@ -1632,7 +1576,7 @@ footer input {
 }
 
 #ticket2{
-  background: url("images/legacy-2.jpeg") no-repeat;
+  background: url("images/legacy-4.jpg") no-repeat;
   background-size: 100% 100%;
 }
 
@@ -1693,4 +1637,13 @@ footer input {
   right: 0;
   bottom: 0;
   display: block;
+}
+
+#fb-link{
+  text-align: center;
+  color: white;
+}
+
+#actual-fblink{
+  color: skyblue;
 }
