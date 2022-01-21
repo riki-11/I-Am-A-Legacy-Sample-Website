@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>About Us</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
-    <title>About Us</title>
-
+    
     <!-- W3 CSS -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Font Awesome CSS -->
@@ -19,42 +19,34 @@
 
 </head>
 <body>
-    <section id="header">
-        <!-- Navbar -->
-        <div class="w3-top w3-mobile">
-            <div class="w3-bar w3-card w3-left-align w3-large">
-                <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large w3-indigo" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <section id="hero-about" class="hero-75">
+        <!-- Possible thing to add: make the navbar have a fixed position then solid background when you scroll down instead of disappearing -->
+        <div id="header">
+            <div class="navbar transparent w3-bar w3-mobile w3-left-align w3-large">
+                <a href="index.html"><img src="images/logo-edited.png" id="logo" class="navbar-item" alt="logo"></a>
+                <a href="about.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">About Us</a>
+                <a href="involved.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Get Involved</a>
+                <a href="advocacy.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Our Advocacy</a>
+                <a href="donate.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48">Donate</a>
+                <a href="signup.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 w3-right">Begin Your Legacy</a>
                 
-                <a href="index.html"><img src="images/legacy-logo.jpg" id="logo" class="w3-bar-item" alt="logo"></a>
-                <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">About Us</a>
-                <a href="involved.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Get Involved</a>
-                <a href="advocacy.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Our Advocacy</a>
-                <a href="signup.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Begin Your Legacy</a>
-                <a href="donate.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white w3-right">Donate</a>
-            </div>
+                <!-- Navbar for mobile -->
 
-        <!-- Navbar on small screens -->
-            <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
-                <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
-                <a href="involved.html" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
-                <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
-                <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
-                <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
+                <!-- NOTE: navbar turns white when we press this, so we'll have to change it -->
+                <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
+                    <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
+                    <a href="involved.html" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
+                    <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
+                    <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
+                    <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
+                </div>
             </div>
         </div>
+        <div class="bottomleft"><h1 class="hero-h1">About Us</h1></div>
     </section>
 
     <section id="about-content" class="main-content w3-mobile">
-        <!-- Tentative bg image and quote -->
-        <div class="large-background">
-            <div class="overlay">
-                <!-- Instead of a quote, we can put a one-sentence description of I Am A Legacy here, similar to this:
-                    https://www.charitywater.org/about
-                -->
-                <h1>A legacy is not leaving something for people, it's leaving something <i>in</i> people.</h1>
-            </div>
-        </div>
-
         <section id="vision-mission" class="curved">
             <div class="w3-container">
                 <div class="w3-row w3-content">
@@ -91,7 +83,7 @@
                     </div>
                     <!-- note to self: find a better image to showcase the "beginning of the NGO" -->
                     <div id="beginning-img" class="w3-half">
-                        <img class="img-panel" src="images/legacy-6.jpg" alt="legacy-beginning">
+                        <img class="img-panel" src="images/sowing-4.jpg" alt="legacy-beginning">
                     </div>
                 </div>
             </div>

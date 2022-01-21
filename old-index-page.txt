@@ -214,3 +214,80 @@ JUST HAVE THIS HERE IN CASE WE'LL NEED IT FOR SOME REASON
     <script src="script.js"></script>
 </body>
 </html>
+
+
+THIS IS THE PLANT A TREE DONATION CARD THAT WILL TEMPORARILY BE REMOVED SINCE THERE'S NOT ENOUGH TIME TO DESIGN THE donate.html page and implement the required javascript to switch donation types dynamically or smthg
+
+<div class="container-overlap flex-center w3-padding-32">
+    <div id="tree-left" class="bg-white container-padding container-shadow donate-padding responsive-width">
+        <div class="w3-row">
+            <div class="w3-col l6 m6 s6 w3-center">
+                <h3 class="active" data-donation-type="tree" data-donation-interval="once-tree">One-time<hr class="interval-hr"></h3>
+            </div>
+            <div class="w3-col l6 m6 s6 w3-center">
+                <h3 class="inactive" data-donation-type="tree" data-donation-interval="monthly-tree">Monthly<hr class="interval-hr"></h3>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col"><h2 class="index-heading w3-center">Plant a Tree</h2></div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l6 m12">
+                <div class="donate-option inactive" data-donation-type="tree">
+                    <div class="flex-2 flex-center flex-column">
+                        <img class="donate-icon" src="icons/sprout.png" alt="sprout">
+                    </div>
+                    <div class="flex-3 flex-center flex-column">
+                        <h5 class="donate-info no-margin">We can grow <b>2</b> trees</h5>
+                        <h2 class="denomination no-margin">₱500</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l6 m12">
+                <div class="donate-option inactive" data-donation-type="tree">
+                    <div class="flex-2 flex-center flex-column">
+                        <img class="donate-icon" src="icons/plant.png" alt="plant">
+                    </div>
+                    <div class="flex-3 flex-center flex-column">
+                        <h5 class="donate-info no-margin">We can grow <b>4</b> trees</h5>
+                        <h2 class="denomination no-margin">₱1000</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l6 m12">
+                <div class="donate-option inactive" data-donation-type="tree">
+                    <div class="flex-2 flex-center flex-column">
+                        <img class="donate-icon" src="icons/trees.png" alt="trees">
+                    </div>
+                    <div class="flex-3 flex-center flex-column">
+                        <h5 class="donate-info no-margin">We can grow <b>20</b> trees</h5>
+                        <h2 class="denomination no-margin">₱5000</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l6 m12">
+                <div class="donate-option inactive" data-donation-type="tree">
+                    <div class="flex-2 flex-center flex-column">
+                        <img class="donate-icon" src="icons/forest.png" alt="forest">
+                    </div>
+                    <div class="flex-3 flex-center flex-column">
+                        <h5 class="donate-info no-margin">Grow as <b>many</b> trees as you wish</h5>
+                        <h2 class="denomination no-margin">Other</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l3 hidden-text">.</div>
+            <div class="w3-col l6">
+                <a class="card-btn-donate" href="donate.html">DONATE</a>
+            </div>
+            <div class="w3-col l3 hidden-text">.</div>
+        </div>
+    </div>
+    <div id="tree-right" class="responsive-width">
+        <img src="images/sapling.jpg" class="donate-img img-shadow img-overlap img-overlap-right" alt="sapling">
+    </div>
+</div>

@@ -9,17 +9,21 @@ function myFunction() {
   }
 }
 
-if (document.getElementById('home-content')) {
+if (document.getElementById('home-content') || document.getElementById('donate-section')) {
   let scholarIntervals = document.querySelectorAll('[data-donation-interval][data-donation-type="scholar"]');
   let scholarOptions = document.querySelectorAll('[data-donation-type="scholar"]:not([data-donation-interval])');
+  let scholarValues = document.querySelectorAll('[data-donation-value]');
+
   let treeIntervals = document.querySelectorAll('[data-donation-interval][data-donation-type="tree"]');
   let treeOptions = document.querySelectorAll('[data-donation-type="tree"]:not([data-donation-interval]');
 
   // Add an onclick event listener to all the donation options
   setActive(scholarIntervals);
   setActive(scholarOptions);
+  setValues(scholarIntervals);
   setActive(treeIntervals);
   setActive(treeOptions);
+
 }
 
 // Function for adding active and inactive functionality to the donation card options
@@ -41,39 +45,25 @@ function setActive(allOptions) {
   })
 }
 
+// Function for setting the denominations for donations depending on the donation interval chosen
+function setValues(intervals) {
+  intervals.forEach(interval => {
+      interval.addEventListener('click', () => {
+          let activeInterval = document.querySelector('.active[data-donation-interval]').dataset.donationInterval; 
+          let lowValue = document.querySelector('[data-donation-value="low"]');
+          let mediumValue = document.querySelector('[data-donation-value="medium"]');
+          let highValue = document.querySelector('[data-donation-value="high"]');
 
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function currentDiv(n) {
-    showDivs(slideIndex = n);
-}
-
-function moveDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var slides = document.getElementsByClassName('slide');
-  var dots = document.getElementsByClassName('carousel-dot');
-
-  if (n > slides.length) {
-      slideIndex = 1;
-  }
-
-  if (n < 1) {
-      slideIndex = slides.length;
-  }
-
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
-  }
-
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  
-  slides[slideIndex - 1].style.display = 'inline-block';
-  dots[slideIndex - 1].className += " w3-white";
+          if (activeInterval === 'once') {
+              lowValue.innerHTML = '₱1000';
+              mediumValue.innerHTML = '₱3000';
+              highValue.innerHTML = '₱5000';
+          }
+          else if (activeInterval === 'monthly') {
+              lowValue.innerHTML = '₱30';
+              mediumValue.innerHTML = '₱90';
+              highValue.innerHTML = '₱150';
+          }
+      })
+  })
 }

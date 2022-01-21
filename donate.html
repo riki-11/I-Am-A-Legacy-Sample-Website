@@ -2,216 +2,128 @@
 <html lang="en">
 <head>
     <title>Donate</title>
-    <meta charset="UTF-8">
-    <!--I add "user-scalable = no" so mobile devices view remove scrolling sideways -->
+	<meta charset="UTF-8">
+    <!--I add user-scalable = no so mobile devices view remove scrolling sideways-->
 	<meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+
+    <!-- W3 CSS -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-	<link rel="stylesheet" href="styles.css">
-    
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+	
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins&family=Raleway:wght@400;500;600;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">    
-
-    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins&family=Raleway:wght@400;500;600;700&family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+     
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    
-    <!-- Navbar -->
-    <!-- We can probably add some more flair to the navbar msg lang kayo sa gc if ya got any ideas! -->
-    <div class="w3-top w3-mobile">
-        <div class="w3-bar w3-card w3-left-align w3-large">
-            <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large w3-indigo" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            
-            <a href="index.html"><img src="images/legacy-logo.jpg" id="logo" class="w3-bar-item" alt="logo"></a>
-            <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">About Us</a>
-            <a href="legacy.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Get Involved</a>
-            <a href="advocacy.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Our Advocacy</a>
-            <a href="donate.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Donate</a>
-            <a href="signup.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white w3-right">Begin Your Legacy</a>
-        </div>
+    <!-- adding dummy script tag to prevent a JS bug -->
+    <script>0</script>
+    <section id="hero-donate" class="hero-full">
+        <div id="header">
+            <div class="navbar transparent w3-bar w3-mobile w3-left-align w3-large">
+                <a href="index.html"><img src="images/logo-edited.png" id="logo" class="navbar-item" alt="logo"></a>
+                <a href="about.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">About Us</a>
+                <a href="involved.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Get Involved</a>
+                <a href="advocacy.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Our Advocacy</a>
+                <a href="donate.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48">Donate</a>
+                <a href="signup.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 w3-right">Begin Your Legacy</a>
+                
+                <!-- Navbar for mobile -->
 
-    <!-- Navbar on small screens -->
-        <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
-            <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
-            <a href="legacy" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
-            <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
-            <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
-            <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
-        </div>
-    </div>
-    
-    <section class="main-donatepage"> 
-      <form class="form-inline">
-        <h1>Support the Cause</h1>
-        <h6>Your donation will help us build more legacies. Any amount is greatly appreciated.</h6>
-        <hr>
-        <label for="fname">Name</label>
-        <input id="fname" type="text" value="" name="fname" placeholder="First" required>
-        <input id="lname" type="text" value="" name="lname" placeholder="Last" required>
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="example@mail.com" name="email" required>
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" pattern="^(09|\+639)\d{9}$" required placeholder="Mobile Phone Number">
-        
-        <div id="donate-index" class="responsive-centered w3-padding-64">
-                <div class="container-overlap flex-center w3-padding-32">
-                    <div id="scholar-left" class="responsive-width">
-                        <img src="images/scholar.jpg" class="img-shadow img-overlap" alt="scholar">
-                    </div>
-                    <div id="scholar-right" class="bg-white container-padding container-shadow donate-padding responsive-width">
-                        <div class="w3-row">
-                            <div class="w3-col l6 m6 s6 w3-center">
-                                <h3 class="inactive" data-donation-type="scholar" data-donation-interval="once">One-time<hr></h3>
-                            </div>
-                            <div class="w3-col l6 m6 s6 w3-center">
-                                <h3 class="active" data-donation-type="scholar" data-donation-interval="monthly">Monthly<hr></h3>
-                            </div>
-                        </div>
-                        <div class="w3-row">
-                            <div class="w3-col"><h2 class="index-heading w3-center">Support a Scholar</h2></div>
-                        </div>
-                        <div class="w3-row">
-                            <div class="w3-col l6 m12">
-                                <div class="donate-option inactive" data-donation-type="scholar">
-                                    <div class="flex-2 flex-center flex-column">
-                                        <img class="donate-icon" src="icons/student-1.png" alt="student-1">
-                                    </div>
-                                    <div class="flex-3 flex-center flex-column">
-                                        <h5 class="donate-info no-margin">You can support <b>1</b> student</h5>
-                                        <h2 class="denomination no-margin">₱30</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w3-col l6 m12">
-                                <div class="donate-option inactive" data-donation-type="scholar">
-                                    <div class="flex-2 flex-center flex-column">
-                                        <img class="donate-icon" src="icons/student-2.png" alt="student-2">
-                                    </div>
-                                    <div class="flex-3 flex-center flex-column">
-                                        <h5 class="donate-info no-margin">You can support <b>3</b> students</h5>
-                                        <h2 class="denomination no-margin">₱90</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w3-row">
-                            <div class="w3-col l6 m12">
-                                <div class="donate-option inactive" data-donation-type="scholar">
-                                    <div class="flex-2 flex-center flex-column">
-                                        <img class="donate-icon" src="icons/student-group.png" alt="student-group">
-                                    </div>
-                                    <div class="flex-3 flex-center flex-column">
-                                        <h5 class="donate-info no-margin">You can support <b>5</b> students</h5>
-                                        <h2 class="denomination no-margin">₱150</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w3-col l6 m12">
-                                <div class="donate-option inactive" data-donation-type="scholar">
-                                    <div class="flex-2 flex-center flex-column">
-                                        <img class="donate-icon" src="icons/graduate.png" alt="graduate">
-                                    </div>
-                                    <div class="flex-3 flex-center flex-column">
-                                        <h5 class="donate-info no-margin">Support <b>more</b> students</h5>
-                                        <h2 class="denomination no-margin">Other</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w3-row">
-                            <div class="w3-col l3 hidden-text">.</div>
-                            <div class="w3-col l6">
-                                <a class="card-btn-donate" href="donate.html">DONATE</a>
-                            </div>
-                            <div class="w3-col l3 hidden-text">.</div>
-                        </div>
-                    </div>
+                <!-- NOTE: navbar turns white when we press this, so we'll have to change it -->
+                <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
+                    <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
+                    <a href="involved.html" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
+                    <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
+                    <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
+                    <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
                 </div>
-                <div class="container-overlap flex-center w3-padding-32">
-                    <div id="tree-left" class="bg-white container-padding container-shadow donate-padding responsive-width">
-                        <div class="w3-row">
-                            <div class="w3-col l6 m6 s6 w3-center">
-                                <h3 class="active" data-donation-type="tree" data-donation-interval="once-tree">One-time<hr></h3>
-                            </div>
-                            <div class="w3-col l6 m6 s6 w3-center">
-                                <h3 class="inactive" data-donation-type="tree" data-donation-interval="monthly-tree">Monthly<hr></h3>
-                            </div>
-                        </div>
-                        <div class="w3-row">
-                            <div class="w3-col"><h2 class="index-heading w3-center">Plant a Tree</h2></div>
-                        </div>
-                        <div class="w3-row">
-                            <div class="w3-col l6 m12">
-                                <div class="donate-option inactive" data-donation-type="tree">
-                                    <div class="flex-2 flex-center flex-column">
-                                        <img class="donate-icon" src="icons/student-1.png" alt="student-1">
-                                    </div>
-                                    <div class="flex-3 flex-center flex-column">
-                                        <h5 class="donate-info no-margin">You can support <b>1</b> student</h5>
-                                        <h2 class="denomination no-margin">₱30</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w3-col l6 m12">
-                                <div class="donate-option inactive" data-donation-type="tree">
-                                    <div class="flex-2 flex-center flex-column">
-                                        <img class="donate-icon" src="icons/student-2.png" alt="student-2">
-                                    </div>
-                                    <div class="flex-3 flex-center flex-column">
-                                        <h5 class="donate-info no-margin">You can support <b>3</b> students</h5>
-                                        <h2 class="denomination no-margin">₱90</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w3-row">
-                            <div class="w3-col l6 m12">
-                                <div class="donate-option inactive" data-donation-type="tree">
-                                    <div class="flex-2 flex-center flex-column">
-                                        <img class="donate-icon" src="icons/student-group.png" alt="student-group">
-                                    </div>
-                                    <div class="flex-3 flex-center flex-column">
-                                        <h5 class="donate-info no-margin">You can support <b>5</b> students</h5>
-                                        <h2 class="denomination no-margin">₱150</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w3-col l6 m12">
-                                <div class="donate-option inactive" data-donation-type="tree">
-                                    <div class="flex-2 flex-center flex-column">
-                                        <img class="donate-icon" src="icons/graduate.png" alt="graduate">
-                                    </div>
-                                    <div class="flex-3 flex-center flex-column">
-                                        <h5 class="donate-info no-margin">Support <b>more</b> students</h5>
-                                        <h2 class="denomination no-margin">Other</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w3-row">
-                            <div class="w3-col l3 hidden-text">.</div>
-                            <div class="w3-col l6">
-                                <a class="card-btn-donate" href="donate.html">DONATE</a>
-                            </div>
-                            <div class="w3-col l3 hidden-text">.</div>
-                        </div>
-                    </div>
-                    <div id="tree-right" class="responsive-width">
-                        <img src="images/sapling.jpg" class="img-shadow img-overlap" alt="sapling">
-                    </div>
-                </div>
-
             </div>
+        </div>
+        <div id="donate-section" class="flex-center w3-content">
+            <div class="donate-heading text-white">
+                <h1 class="donate-heading-h1">Empower The Youth By Creating Legacies</h1>
+                <h4>Your generous donation will support the education of young Filipinos across the country.</h4>
+            </div>
+            <div class="donate-container" style="flex: 1">
+                <div class="bg-white container-shadow donate-padding responsive-width">
+                    <div class="w3-row">
+                        <div class="w3-col l6 m6 s6 w3-center">
+                            <h3 class="inactive" data-donation-type="scholar" data-donation-interval="once">One-time<hr class="interval-hr"></h3>
+                        </div>
+                        <div class="w3-col l6 m6 s6 w3-center">
+                            <h3 class="active" data-donation-type="scholar" data-donation-interval="monthly">Monthly<hr class="interval-hr"></h3>
+                        </div>
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-col"><h2 class="index-heading w3-center">Support a Scholar</h2></div>
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-col l6 m12">
+                            <div class="donate-option inactive" data-donation-type="scholar">
+                                <div class="flex-2 flex-center flex-column">
+                                    <img class="donate-icon" src="icons/student-1.png" alt="student-1">
+                                </div>
+                                <div class="flex-3 flex-center flex-column">
+                                    <h5 class="donate-info no-margin">You can support <b>1</b> student</h5>
+                                    <h2 class="denomination no-margin" data-donation-value="low">₱30</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-col l6 m12">
+                            <div class="donate-option inactive" data-donation-type="scholar">
+                                <div class="flex-2 flex-center flex-column">
+                                    <img class="donate-icon" src="icons/student-2.png" alt="student-2">
+                                </div>
+                                <div class="flex-3 flex-center flex-column">
+                                    <h5 class="donate-info no-margin">You can support <b>3</b> students</h5>
+                                    <h2 class="denomination no-margin" data-donation-value="medium">₱90</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-col l6 m12">
+                            <div class="donate-option inactive" data-donation-type="scholar">
+                                <div class="flex-2 flex-center flex-column">
+                                    <img class="donate-icon" src="icons/student-group.png" alt="student-group">
+                                </div>
+                                <div class="flex-3 flex-center flex-column">
+                                    <h5 class="donate-info no-margin">You can support <b>5</b> students</h5>
+                                    <h2 class="denomination no-margin" data-donation-value="high">₱150</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-col l6 m12">
+                            <div class="donate-option inactive" data-donation-type="scholar">
+                                <div class="flex-2 flex-center flex-column">
+                                    <img class="donate-icon" src="icons/graduate.png" alt="graduate">
+                                </div>
+                                <div class="flex-3 flex-center flex-column">
+                                    <h5 class="donate-info no-margin">Support <b>more</b> students</h5>
+                                    <h2 class="denomination no-margin" data-donation-value="other">Other</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-col l3 hidden-text">.</div>
+                        <div class="w3-col l6">
+                            <a class="card-btn-donate" href="donate.html">DONATE</a>
+                        </div>
+                        <div class="w3-col l3 hidden-text">.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <input type="submit" value="Donate">
-        <input type="reset">
-      </form>
-  </section>
-
-  <footer class="w3-container">
+    <footer class="w3-container">
         <div class="w3-content w3-row">
             <div class="w3-quarter">
                 <form action="#">
@@ -256,5 +168,7 @@
             </div>
         </div>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>

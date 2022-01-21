@@ -55,26 +55,14 @@ hr {
     margin-right: auto;
 }
 
-@media screen and (max-width: 1530px) and (min-width: 1139px) {
-    .w3-content {
-        padding: 0px 20px;
-    }
-}
-
 #logo {
     float: left;
     height: 135px;
     max-width: 100%;
 }
 
-/* CSS for Curves */
 .curved {
     position: relative;
-}
-
-/* CSS for main content of the page */
-.main-content{
-    padding-top: 123px;
 }
 
 .main-donatepage, .main-signup-page{
@@ -128,15 +116,68 @@ input[type=reset]{
 /* CSS for new index.html page */
 
 #header {
+    position: relative;
     padding-top: 15px;
     margin-left: 1%;
     margin-right: 1%;
+    z-index: 2;
 }
 
-#hero {
+/* index.html page has a different height */
+
+.hero-full, .hero-75 {
+    position: relative;
+    background: no-repeat center;
+    background-size: cover;
+}
+
+.hero-full {
     min-height: 100vh;
     width: 100vw;
-    background: url("images/youth.jpg") no-repeat center;
+}
+
+.hero-full::before {
+    min-height: 100%;
+    width: 100vw;
+}
+
+.hero-75 {
+    min-height: 75vh;
+    width: 100vw;
+}
+
+.hero-75::before {
+    min-height: 100%;
+    width: 100vw;
+}
+
+.hero-75::before, .hero-full::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#hero-index {
+    background-image: url("images/youth.jpg");
+}
+
+/* Since the hero-index doesn't need an overlay */
+#hero-index::before {
+    background-color: transparent;
+}
+
+#hero-involved {
+    background-image: url("images/legacy-7.jpg");
+}
+
+#hero-about {
+    background-image: url("images/legacy-6.jpg");
+}
+
+#hero-donate {
+    background-image: url("images/helping.jpg");
 }
 
 .transparent {
@@ -172,17 +213,22 @@ input[type=reset]{
     flex-direction: column;
 }
 
-#hero-text {
+.hero-text {
+    position: relative;
     max-width: 1350px;
     margin-right: auto;
     margin-left: auto;
     padding: 0.01rem 1rem;
 }
 
-#hero-text h1 {
-    font-size: clamp(3rem, 6.8vw, 6.5rem);
-    letter-spacing: clamp(0px, 1vw, 9px);
+.hero-h1 {
+    font-size: 106px;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+#hero-h1-index {
+    letter-spacing: clamp(0px, 1vw, 9px);
+    font-size: clamp(3rem, 6.8vw, 6.5rem);
 }
 
 #join-btn {
@@ -203,6 +249,10 @@ input[type=reset]{
     background: linear-gradient(90deg, rgba(19,54,74,1) 0%, rgba(28,78,105,1) 54%, rgba(25,59,84,1) 100%);
 }
 
+.text-white {
+    color: white;
+}
+
 .bg-white {
     background-color: white;
 }
@@ -221,6 +271,16 @@ input[type=reset]{
 
 .img-overlap {
     position: relative;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-overlap-left {
+    margin-left: 50px;
+}
+
+.img-overlap-right {
+    margin-left: -50px;
 }
 
 .container-padding {
@@ -228,10 +288,9 @@ input[type=reset]{
 }
 
 .index-heading {
-    font-size: clamp(2.5rem, 4.5vw, 3.3rem);
+    font-size: clamp(2.5rem, 5.5vw, 3.3rem);
     font-weight: 600;
     line-height: 59px;
-    width: 95%;
 }
 
 .flex-2 {
@@ -294,10 +353,6 @@ input[type=reset]{
     height: auto;
 }
 
-img[alt="legacy-camp"] {
-    margin-left: -50px;
-}
-
 #row-2 {
     display: flex;
     justify-content: space-between;
@@ -335,21 +390,12 @@ img[alt="legacy-camp"] {
     flex: 0.85;
 }
 
-img[alt="scholar"], img[alt="sapling"] {
-    width: 100%;
+.donate-img {
     height: 750px;
     object-fit: cover;
 }
 
-img[alt="scholar"] {
-    margin-left: 50px;
-}
-
-img[alt="sapling"] {
-    margin-left: -50px;
-}
-
-#donate-index hr {
+.interval-hr {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -376,13 +422,17 @@ img[alt="sapling"] {
     opacity: 0.5;
 }
 
+.active, .inactive {
+    user-select: none;
+}
+
 .inactive:hover {
     cursor: pointer;
     opacity: 0.9;
     transform: scale(1.01, 1.01);
 }
 
-.donate-padding {
+#donate-index .donate-padding {
     padding: 20px 7% 35px;
 }
 
@@ -407,13 +457,6 @@ img[alt="sapling"] {
 .donate-icon {
     height: 128px;
     width: 128px;
-}
-
-@media screen and (max-width: 1300px) {
-    .donate-icon {
-        height: 100px;
-        width: 100px;
-    }
 }
 
 .denomination {
@@ -441,85 +484,35 @@ img[alt="sapling"] {
     background-color: #2a5fc6;
 }
 
-@media screen and (max-width: 1139px) {
-    .responsive-centered {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .responsive-width {
-        width: 100%;
-        /* add margin: 0; or margin left and right 0 */
-    }
-
-    .container-overlap {
-        flex-direction: column;
-    }
-    
-    #about-right{
-        max-height: 500px;
-        margin: 0;
-    }
-
-
-    /* make a class for this!! */
-    #about-right img {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    #row-2 {
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #row-2 > div {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    /* make a class for this!! */
-    img[alt="scholar"] {
-        margin: 0;
-        height: auto;
-        max-height: 450px;
-    }
-}
-
 /* End of CSS for index-2.html page */
 
-
-
-.overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.38);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 1;
+/* Start of CSS for revised donate.html page */
+#donate-section {
+    max-width: 1700px;
+    padding: 1%;
 }
 
-.overlay h1 {
-    color: white !important;
-}
-
-#about-content .overlay {
-    height: 90%;
-}
-
-#about-content .overlay h1 {
-    font-size: 50px;
-    margin: 1em;
+.donate-heading {
+    flex: 0.9;
     text-align: center;
+    padding: 1%;
 }
+
+.donate-heading-h1 {
+    font-size: clamp(3rem, 3.8vw, 5.3rem);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+#donate-section .donate-padding {
+    padding: 10px 1% 30px;
+}
+
+.donate-container {
+    flex: 1;
+    padding: 0 2%;
+}
+
+/* End of revised donate.html page CSS */ 
 
 #grid-1 hr {
     margin: 0;
@@ -623,151 +616,6 @@ footer input {
     box-shadow: 1px 1px 3px gray;
     background-color: white;
     color: #151F90;
-}
-
-/* responsive design for smartphone screen sizes only */
-@media screen and (min-width: 320px) and (max-width: 840px){
-
-    .bottomleft {
-      position: absolute;
-      bottom: 30%;
-      text-align: center;
-      font-size: 80px;
-      color: white;
-      z-index: 1;
-    }
-
-    .w3-jumbo {
-        font-size: 30px !important;
-        text-align: center;
-    }
-
-    body,h1,h2,h3,h4,h5,h6 {
-        text-align: center;
-    }
-
-    #grid-2 {
-        padding-top: 170px;
-    }
-
-    img[alt="forest"] {
-        bottom: auto;
-    }
-
-    img[alt="volcano"] {
-        bottom: auto;
-    }
-
-    footer input {
-        text-align: center;
-    }
-
-    .main-signup-page .form-signup img{
-        height: 200%;
-    }
-
-    .hidden-text {
-        display: none;
-    }
-
-    #about-left h2, #about-left p {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 840px) and (orientation: portrait){
-  #slider {
-    height: 35vh;
-  } 
-
-  .btn-2-container {
-    margin: auto;
-  }
-
-  .btn-3-container {
-    position: relative;
-    margin: auto;
-  }
-
-  .grid-item p {
-    text-align: center;
-  }
-
-  .aspect-claim{
-    text-align: center;
-  }
-
-  .advocacy-grid {
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 24px;
-  }
-
-  .aspect{
-    text-align: center;
-  }
-
-  .aspect-row {
-    flex-direction: column;
-    width: 80%;
-    text-align: center;
-  }
-
-  .card-container{
-    width: 80%;
-  }
-
-  .grid-item2 {
-  min-height: 200px;
-  } 
-
-  #legacy-h1{
-    font-size: 24px;
-  }
-
-  .card-container2{
-    width: 80%;
-  }
-
-  .btn-4-container {
-    margin: auto;
-    position: relative;
-  }
-
-  .legacy-grid{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 24px;
-    grid-row-gap: 50px;
-  }
-
-  .ticket-box {
-    background-color: white;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    margin: 30px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
-  }
-  
-  #sowing-imgs img {
-    margin-top: 5px;
-    margin-bottom: 20px; 
-  }
-
-  .main-donatepage .form-inline, .main-signup-page .form-signup{
-    width: 75%;
-    margin: 0 auto;
-    text-align:left;
-    padding-bottom: 75px;
-  }
-
-  .btn-1-container{
-    display: block;
-    width: auto;
-    height: auto;
-    float: none;
-  }
 }
 
 .social-icons {
@@ -1164,8 +1012,8 @@ footer input {
   background-color:#1966F9;
   line-height: 1;
   padding: 10px 20px;
-  right: 6px;
-  bottom: 5px;
+  right: 12px;
+  bottom: 10px;
   left: auto;
 }
 
@@ -1263,22 +1111,7 @@ footer input {
     margin-bottom: 3em;
 }
 
-@media screen and (min-width: 320px) and (max-width: 700px) {
-    .what-we-do-info {
-        text-align: center;
-        padding-left: 0;
-    }
 
-    #what-we-do .w3-content > div {
-        margin-bottom: 3em;
-    }
-}
-
-@media screen and (min-width: 701px) {
-    .what-we-do-info h2, .what-we-do-info h5 {
-        text-align: left;
-    }
-}
 
 #what-we-do .icon {
     width: auto;
@@ -1398,7 +1231,7 @@ footer input {
 }
 
 
-#legacy-h1{
+#legacy-h1 {
   text-align: center;
   padding-bottom: 25px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -1427,7 +1260,6 @@ footer input {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
 }
 
-
 #ticket-title {
   font-weight: 600;
   font-size: 36px;
@@ -1441,110 +1273,28 @@ footer input {
   line-height: 24px;
   margin: 0 0 30px 0;
 }
+
 #ticket-des{
   margin: 0 0 30px 0;
 }
+
 .ticket-image{
   height: 300px;
   width: 100%;
   object-fit: cover;
 }
+
 .text-container {
   margin: 60px 45px 55px;
 }
 
-/*jump*/
-@media screen and (min-width: 768px) {
-
-  .video-box{
-    display: flex;
-  }
-
-  .aspect-claim{
-    text-align: left;
-  }
-
-  .grid-item h3{
-    padding: 2px 16px;
-    padding-top: 20px;
-  }
-
-  .btn-3-container {
+.bottomleft {
     position: absolute;
-    margin: 0;
-  }
-
-  .aspect-row{
-    flex-direction: row;
-    text-align: leff;
-  }
-
-  .aspect{
-    text-align: left;
-  }
-
-  #deforest-title{
-    width: 50%;
-  }
-
-  .advocacy-grid{
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .grid-img2{
-    height: 90%;
-  }
-
-  .btn-4-container {
-    position: absolute;
-  }
-  .card-container2{
-    width: 90%;
-  }
-
-  .grid-item2 {
-    min-height: 600px;
-  } 
-
-  .legacy-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 24px;
-    grid-row-gap: 50px;
-  }
-
-  .ticket-box {
-    flex-direction: row;
     width: 100%;
-  }
-
-  .ticket-image{
-    height: 420px;
-    min-width: 500px;
-  }
- .text-container {
-    margin: 0 60px;
-    max-width: 660px;
-  }
-
-  .bottomleft {
-    position: absolute;
-    bottom: 8px;
-    left: 32px;
+    bottom: 0;
+    left: 0;
+    margin: 0 1%;
     color: white;
-    z-index: 1;
-    font-size: 106px;
-  }
-
-}
-@media screen and (min-width: 1024px) {
-  .ticket-box {
-    max-width: 1200px;
-  }
-
-  .card-container{
-    width: 75%;
-  }
 }
 
 .btn-4-container {
@@ -1646,4 +1396,312 @@ footer input {
 
 #actual-fblink{
   color: skyblue;
+}
+
+
+/* ALL MEDIA QUERIES SHOULD BE AT BOTTOM OF FILE */
+@media screen and (max-width: 1530px) and (min-width: 1139px) {
+    .w3-content {
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (max-width: 1139px) {
+    .responsive-centered {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .responsive-width {
+        width: 100%;
+        /* add margin: 0; or margin left and right 0 */
+    }
+
+    .flex-center {
+        flex-direction: column;
+    }
+    
+    #about-right {
+        max-height: 500px;
+        margin: 0;
+    }
+    
+    #row-2 {
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #row-2 > div {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .img-overlap {
+        margin: 0;
+        height: auto;
+        max-height: 450px;
+    }
+ 
+}
+
+@media screen and (max-width: 1300px) {
+    .donate-icon {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .donate-option {
+        min-height: 162px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 840px){
+
+    .hero-h1 {
+        font-size: 80px;
+    }
+
+    .bottomleft {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .w3-jumbo {
+        font-size: 30px !important;
+        text-align: center;
+    }
+
+    body,h1,h2,h3,h4,h5,h6 {
+        text-align: center;
+    }
+
+    #grid-2 {
+        padding-top: 170px;
+    }
+
+    img[alt="forest"] {
+        bottom: auto;
+    }
+
+    img[alt="volcano"] {
+        bottom: auto;
+    }
+
+    footer input {
+        text-align: center;
+    }
+
+    .main-signup-page .form-signup img{
+        height: 200%;
+    }
+
+    .hidden-text {
+        display: none;
+    }
+
+    #about-left h2, #about-left p {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 840px) and (orientation: portrait){
+  .btn-2-container {
+    margin: auto;
+  }
+
+  .btn-3-container {
+    position: relative;
+    margin: auto;
+  }
+
+  .grid-item p {
+    text-align: center;
+  }
+
+  .aspect-claim{
+    text-align: center;
+  }
+
+  .advocacy-grid {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 24px;
+  }
+
+  .aspect{
+    text-align: center;
+  }
+
+  .aspect-row {
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+  }
+
+  .card-container{
+    width: 80%;
+  }
+
+  .grid-item2 {
+  min-height: 200px;
+  } 
+
+  #legacy-h1{
+    font-size: 24px;
+  }
+
+  .card-container2{
+    width: 80%;
+  }
+
+  .btn-4-container {
+    margin: auto;
+    position: relative;
+  }
+
+  .legacy-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 50px;
+  }
+
+  .ticket-box {
+    background-color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+  }
+  
+  #sowing-imgs img {
+    margin-top: 5px;
+    margin-bottom: 20px; 
+  }
+
+  .main-donatepage .form-inline, .main-signup-page .form-signup{
+    width: 75%;
+    margin: 0 auto;
+    text-align:left;
+    padding-bottom: 75px;
+  }
+
+  .btn-1-container{
+    display: block;
+    width: auto;
+    height: auto;
+    float: none;
+  }
+}
+
+/* note to self: maybe add these media queries to others to reduce complexity */
+@media screen and (min-width: 320px) and (max-width: 700px) {
+    .what-we-do-info {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    #what-we-do .w3-content > div {
+        margin-bottom: 3em;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .what-we-do-info h2, .what-we-do-info h5 {
+        text-align: left;
+    }
+}
+
+/*jump*/
+@media screen and (min-width: 768px) {
+
+  .video-box{
+    display: flex;
+  }
+
+  .aspect-claim{
+    text-align: left;
+  }
+
+  .grid-item h3{
+    padding: 2px 16px;
+    padding-top: 20px;
+  }
+
+  .btn-3-container {
+    position: absolute;
+    margin: 0;
+  }
+
+  .aspect-row{
+    flex-direction: row;
+    text-align: leff;
+  }
+
+  .aspect{
+    text-align: left;
+  }
+
+  #deforest-title{
+    width: 50%;
+  }
+
+  .advocacy-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-img2{
+    height: 90%;
+  }
+
+  .btn-4-container {
+    position: absolute;
+  }
+  .card-container2{
+    width: 90%;
+  }
+
+  .grid-item2 {
+    min-height: 600px;
+  } 
+
+  .legacy-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 50px;
+  }
+
+  .ticket-box {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .ticket-image{
+    height: 420px;
+    min-width: 500px;
+  }
+ .text-container {
+    margin: 0 60px;
+    max-width: 660px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ticket-box {
+    max-width: 1200px;
+  }
+
+  .card-container{
+    width: 75%;
+  }
 }

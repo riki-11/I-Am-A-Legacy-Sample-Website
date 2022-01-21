@@ -21,36 +21,37 @@
 
 <body>
 
-    <!-- Navbar -->
-    <!-- We can probably add some more flair to the navbar msg lang kayo sa gc if ya got any ideas! -->
-    <div class="w3-top w3-mobile">
-        <div class="w3-bar w3-card w3-left-align w3-large">
-            <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large w3-indigo" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            
-            <a href="index.html"><img src="images/legacy-logo.jpg" id="logo" class="w3-bar-item" alt="logo"></a>
-            <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">About Us</a>
-            <a href="involved.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Get Involved</a>
-            <a href="advocacy.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Our Advocacy</a>
-            <a href="donate.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Donate</a>
-            <a href="signup.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white w3-right">Begin Your Legacy</a>
-        </div>
+    <!-- Hello i just edited the navbar and the front image section a bit to match the home page more in terms of styling :D -enrique-->
 
-    <!-- Navbar on small screens -->
-        <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
-            <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
-            <a href="legacy.html" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
-            <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
-            <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
-            <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
+    <section id="hero-involved" class="hero-75">
+        <!-- Possible thing to add: make the navbar have a fixed position then solid background when you scroll down instead of disappearing -->
+        <div id="header">
+            <div class="navbar transparent w3-bar w3-mobile w3-left-align w3-large">
+                <a href="index.html"><img src="images/logo-edited.png" id="logo" class="navbar-item" alt="logo"></a>
+                <a href="about.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">About Us</a>
+                <a href="involved.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Get Involved</a>
+                <a href="advocacy.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Our Advocacy</a>
+                <a href="donate.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48">Donate</a>
+                <a href="signup.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 w3-right">Begin Your Legacy</a>
+                
+                <!-- Navbar for mobile -->
+
+                <!-- NOTE: navbar turns white when we press this, so we'll have to change it -->
+                <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
+                    <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
+                    <a href="involved.html" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
+                    <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
+                    <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
+                    <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="bottomleft"><h1 class="hero-h1">Get Involved</h1></div>
+    </section>
 
     <section id="legacy-page"> 
-      <div class ="img-box">
-        <div class="bottomleft">Get Involved</div>
-        <img src="images/legacy-7.jpg" id = "legacy-img">
-      </div>
-      <h1 id="legacy-h1">Events and campaigns</h1>
+      <h1 id="legacy-h1">Events and Campaigns</h1>
   
       <div class="ticket">
         <div class="ticket-box">
