@@ -20,6 +20,8 @@ a {
 
 p {
     color: #222B2F;
+    font-size: 20px;
+    line-height: 37px;
 }
 
 hr {
@@ -151,7 +153,7 @@ input[type=reset]{
     width: 100vw;
 }
 
-.hero-75::before, .hero-full::before {
+.hero-75::before, .hero-full::before, .forests-matter-container::before {
     content: ' ';
     position: absolute;
     left: 0;
@@ -178,6 +180,10 @@ input[type=reset]{
 
 #hero-donate {
     background-image: url("images/helping.jpg");
+}
+
+#hero-advocacy {
+    background-image: url("images/deforestation-2.jpg");
 }
 
 .transparent {
@@ -245,8 +251,9 @@ input[type=reset]{
     color: #164DB6;
 }
 
-#home-content {
-    background: linear-gradient(90deg, rgba(19,54,74,1) 0%, rgba(28,78,105,1) 54%, rgba(25,59,84,1) 100%);
+#home-content, #advocacy-content, #what-do {
+    background: linear-gradient(90deg, rgba(19,54,74,1) 0%, 
+    rgba(28,78,105,1) 54%, rgba(25,59,84,1) 100%);
 }
 
 .text-white {
@@ -287,7 +294,7 @@ input[type=reset]{
     padding: 20px 35px 40px;
 }
 
-.index-heading {
+.responsive-h2 {
     font-size: clamp(2.5rem, 5.5vw, 3.3rem);
     font-weight: 600;
     line-height: 59px;
@@ -307,8 +314,6 @@ input[type=reset]{
 
 /* note to self: if there's still time, make a class for this? */
 #about-left p {
-    font-size: 20px;
-    line-height: 37px;
     white-space: normal;
     width: 90%;
 }
@@ -436,14 +441,17 @@ input[type=reset]{
     padding: 20px 7% 35px;
 }
 
+.width-90-center {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .donate-option {
     display: flex;
     border-width: 3px;
     border-style: solid;
     border-radius: 10px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
     padding: 10px;
     margin-bottom: 15px;
 }
@@ -490,6 +498,7 @@ input[type=reset]{
 #donate-section {
     max-width: 1700px;
     padding: 1%;
+    align-items: flex-start;
 }
 
 .donate-heading {
@@ -501,6 +510,7 @@ input[type=reset]{
 .donate-heading-h1 {
     font-size: clamp(3rem, 3.8vw, 5.3rem);
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    margin: 0;
 }
 
 #donate-section .donate-padding {
@@ -512,7 +522,158 @@ input[type=reset]{
     padding: 0 2%;
 }
 
+.donate-form {
+    color: #544e4e;
+    padding: 15px 2.5%;
+}
+
+.donate-form-input {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+}
+
+.donate-form-label {
+    font-size: 18px;
+    text-align: left !important;
+}
+
+.donate-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.donate-input-name {
+    width: 80%;
+}
+
+#l-name, label[for="l-name"] {
+    width: 80%;
+    margin-left: auto;
+}
+
+#email {
+    width: 90%;
+}
+
+#payment, label[for="payment"] {
+    width: 80%;
+    margin-left: auto;
+    background-color: white;
+}
+
 /* End of revised donate.html page CSS */ 
+
+/* Additional classes for advocacy.html page */
+
+.advocacy-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+}
+
+.advocacy-heading-h1 {
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+    font-size: clamp(3rem, 4.5vw, 5.3rem);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+.advocacy-heading-h1 hr {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid white;
+}
+
+.deforestation-gallery {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-line {
+    display: block;
+    height: 100%;
+    border-left: 3px solid white;
+    width: 1px;
+    position: absolute;
+    z-index: -1;
+}
+
+.gallery-container {
+    width: 100%;
+}
+
+.gallery-img {
+    flex: 1.7;
+}
+
+.gallery-location {
+    flex: 1;
+    font-size: 50px;
+}
+
+.forests-matter-container {
+    background: url("images/deforestation-3.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forests-matter-container::before {
+    height: 100%;
+    width: 100%;
+}
+
+.matters-card {
+    display: flex;
+    min-height: 250px; /* Change this to something else later on */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.matters-card-img {
+    flex: 1;
+}
+
+.matters-card-img img {
+    height: 100%;
+    width: 100%;
+    max-height: 500px; /* edit this later on to whatever the right size should be */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.advocacy-h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0;
+    align-self: stretch;
+}
+
+.matters-card-info {
+    color: #222B2F;
+    flex: 1.7;
+    padding: 5px 20px;
+}
+
+/* End of additional classes for advocacy.html page */
 
 #grid-1 hr {
     margin: 0;
@@ -560,27 +721,6 @@ input[type=reset]{
 
 #grid-2 img {
     border-radius: 40px;
-}
-
-.btn-1-container {
-    border: 2.5px solid white;
-    border-radius: 8px;
-    text-align: center;
-    width: 140px;
-    height: 46px;
-    padding: 8.5px;
-    transition: 0.3s;
-}
-
-.btn-1-container:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 2.5px solid rgba(0, 0, 0, 0);
-}
-
-.btn-1 {
-    font-size: 16.5px;
-    text-decoration: none;
-    color: white;
 }
 
 footer {
@@ -737,7 +877,8 @@ footer input {
     overflow: hidden;
     background: rgb(182, 180, 180, 0.8);  /* fallback for old browsers */
     background: linear-gradient(rgba(182, 180, 180, 0.8), rgba(53, 83, 252, 0.8)), url("images/deforestation.jpg");  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(rgba(182, 180, 180, 0.8), rgba(53, 83, 252, 0.8)), url("images/deforestation.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(rgba(182, 180, 180, 0.8), rgba(53, 83, 252, 0.8)), url("images/deforestation.jpg"); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -819,66 +960,52 @@ footer input {
 }
 
 .title:after {
-  content: '';
-  display: block;
-  border-top: 6px solid rgb(179, 179, 179);
-  margin-top: 0.5em;
+    content: '';
+    display: block;
+    border-top: 6px solid rgb(179, 179, 179);
+    margin-top: 0.5em;
 }
 
 .data-title{
-  font-weight: 600;
-  color: navy;
-  flex: 1;
+    font-weight: 600;
+    color: navy;
+    flex: 1;
 }
 
 .data-quant{
-  flex:1;
-}
-
-.aspect-claim{
-  font-weight: bold;
-}
-
-.banner-container{
-  padding-top: 56px;
-  padding-bottom: 10px;
-}
-
-.banner{
-  font-size: 36px;
-  display: block;
-  font-weight: bold;
-  text-align: center;
-}
-
-.banner-desc{
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex; 
-  color: white;
+    flex:1;
 }
 
 #banner-btn{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner-box{
-  margin: auto;
-  width: 50%;
+    margin: auto;
+    width: 50%;
 }
 
-.advocacy-part2{
-  padding-bottom: 128px;
-  padding-top: 24px;
+.advocacy-part2 {
+    padding: 0.8% 1% 1%;;
+}
+
+
+.advocacy-part2 .w3-content {
+    padding: 0;
 }
 
 #banner-what-to{
-  background-color: #195BF2;
-  color:white;
-  margin-bottom: 50px;
+    color:white;
+    text-align: center;
+}
+
+.bottom-arrow {
+    border-bottom: 5px solid rgba(28,78,105,1);
+    padding-top: 30px;
+    position: relative;
+    z-index: 2;
 }
 
 .bottom-arrow:after{
@@ -889,43 +1016,28 @@ footer input {
     margin: 0 auto;
     width: 0;
     height: 0;
-    border-top: 25px solid #195BF2;
+    border-top: 25px solid rgba(28,78,105,1);
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
 }
 
-.bottom-arrow {
-      border-bottom: 5px solid #195BF2;
-      padding-top: 30px;
+.fb-video {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    height: 100%;
 }
 
-.video-box{
-  margin: 0 auto;
-  width: 75%;
-  height: auto;
+.vid-text {
+    padding: 1% 4% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 
-.fb-video{
-  margin: 0 auto;
-  width: 100%;
-  display: block;
-  height: 100%;
-}
-
-.vid-text{
-  display: flex;
-  flex-direction: column;
-  padding-left: 15px;
-  flex-wrap: wrap;
-}
-
-.vid-text h2{
-  color: #163DA6;
-  text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
-}
-
-.vid-text h3{
-  color: #195BF2;
+.vid-text p {
+    margin-top: 0;
 }
 
 #vid-btn{
@@ -984,10 +1096,6 @@ footer input {
 .grid-item h3{
   color: #163DA6;
   text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
-}
-
-.grid-item p{
-  padding: 2px 16px;
 }
 
 .grid-img{
@@ -1110,8 +1218,6 @@ footer input {
 #what-we-do .w3-content > div:not(:first-child) {
     margin-bottom: 3em;
 }
-
-
 
 #what-we-do .icon {
     width: auto;
@@ -1241,7 +1347,8 @@ footer input {
 }
 
 #legacy-page{
-  background: linear-gradient(90deg, rgba(19,54,74,1) 0%, rgba(28,78,105,1) 54%, rgba(25,59,84,1) 100%);
+  background: linear-gradient(90deg, rgba(19,54,74,1) 0%, 
+  rgba(28,78,105,1) 54%, rgba(25,59,84,1) 100%);
 }
 
 .ticket {
@@ -1422,6 +1529,10 @@ footer input {
         flex-direction: column;
     }
     
+    #donate-section {
+        align-items: center;
+    }
+
     #about-right {
         max-height: 500px;
         margin: 0;
@@ -1479,7 +1590,7 @@ footer input {
         text-align: center;
     }
 
-    body,h1,h2,h3,h4,h5,h6 {
+    h1,h2,h3,h4,h5,h6 {
         text-align: center;
     }
 
@@ -1510,6 +1621,15 @@ footer input {
     #about-left h2, #about-left p {
         width: 100%;
     }
+
+    .responsive-centered {
+        text-align: center;
+    }
+
+    .vid-text {
+        align-items: center;
+    }
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 840px) and (orientation: portrait){
@@ -1522,7 +1642,7 @@ footer input {
     margin: auto;
   }
 
-  .grid-item p {
+  .grid-text {
     text-align: center;
   }
 
@@ -1543,10 +1663,6 @@ footer input {
     flex-direction: column;
     width: 80%;
     text-align: center;
-  }
-
-  .card-container{
-    width: 80%;
   }
 
   .grid-item2 {
@@ -1700,8 +1816,32 @@ footer input {
   .ticket-box {
     max-width: 1200px;
   }
+}
 
-  .card-container{
-    width: 75%;
-  }
+/* For w3.css small screens */ 
+@media screen and (max-width: 600px) {
+    .donate-input-name, #l-name, label[for="l-name"], #email {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .matters-card {
+        flex-direction: column;
+    }
+
+    .matters-card-img, .matters-card-info {
+        flex: 1;
+    }
+
+    .matters-card-img {
+        max-height: 400px;
+    }
+}
+
+/* For w3.css medium screens */ 
+@media screen and (max-width: 992px) {
+    #payment, label[for="payment"] {
+        width: 100%;
+        margin-left: 0;
+    }
 }

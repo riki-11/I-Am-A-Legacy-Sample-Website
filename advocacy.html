@@ -19,307 +19,234 @@
 
 <body>
 
-    <!-- Navbar -->
-    <!-- We can probably add some more flair to the navbar msg lang kayo sa gc if ya got any ideas! -->
-    <div class="w3-top w3-mobile">
-        <div class="w3-bar w3-card w3-left-align w3-large">
-            <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large w3-indigo" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            
-            <a href="index.html"><img src="images/legacy-logo.jpg" id="logo" class="w3-bar-item" alt="logo"></a>
-            <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">About Us</a>
-            <a href="involved.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Get Involved</a>
-            <a href="advocacy.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Our Advocacy</a>
-            <a href="signup.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Begin Your Legacy</a>
-            <a href="donate.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white w3-right">Donate</a>
-        </div>
+    <section id="hero-advocacy" class="hero-75">
+        <!-- Possible thing to add: make the navbar have a fixed position then solid background when you scroll down instead of disappearing -->
+        <div id="header">
+            <div class="navbar transparent w3-bar w3-mobile w3-left-align w3-large">
+                <a href="index.html"><img src="images/logo-edited.png" id="logo" class="navbar-item" alt="logo"></a>
+                <a href="about.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">About Us</a>
+                <a href="involved.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Get Involved</a>
+                <a href="advocacy.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Our Advocacy</a>
+                <a href="donate.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48">Donate</a>
+                <a href="signup.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 w3-right">Begin Your Legacy</a>
+                
+                <!-- Navbar for mobile -->
 
-    <!-- Navbar on small screens -->
-        <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
-            <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
-            <a href="involved.html" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
-            <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
-            <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
-            <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
-        </div>
-    </div>
-
-<!-- 
-    hello i thought of a sort of guide for the content that can be placed on this page. -enrique
-
-This page will focus on discussing deforestation.
-    We will need the following: 
-        - A big, shocking statistic at the top of the page about deforestation
-            - A follow-up paragraph right under it or beside it or wherever is nice
-        - The implications of deforestation to different sectors (health, agriculture, tourism, natural habitats, etc.)
-            - These could each have one or more significant statistics or facts
-        - What can we do to combat this issue? 
-            (the wording for these stuff is tentative, doesn't have to exactly be these)
-            - Educate Yourself
-                - (optional) link to some educational resources
-            - Raise Awareness
-                - Possibly link to social media platform or specificially their Facebook page
-            - Join Campaigns
-                - This is where we can insert the eco-camp video:
-                    - https://www.facebook.com/watch/?v=347312403838862
-                - Have a link to “our legacy” page
-            - Donate
-                - Have a link to donate page
-    This page can be good for inspiration for both layout and content:
-    https://www.charitywater.org/global-water-crisis#
-
-    this website has forest information https://www.fao.org/state-of-forests/en/
-    their website also looks nice XD
--->
-
-  <!--
-  -note to self better design and make responive
-  -I need to find the things to place here XD
-  -Any suggestions for this page?
-
-  How should i design the font with the gradient background XD
-
-  hello what if u try and follow a similar layout to this: https://www.americanforests.org/what-drives-us/climate-change/ 
-  this entire website looks rly nice actually (for me) we can take lots of inspiration from it
-    - somehow like the alternating gradient background and solid background, 
-    - i'll try n put stuff for reference in the figma file i sent in the group chat (u might have to zoom out in figma to see the whole thing)
-        - https://www.figma.com/file/HZqdViK1gmFss4v8VjSxQc/I-Am-A-Legacy-Sample-Website?node-id=0%3A1
-    
-  -->
-
-<section class="main-advocacy">
-  <div id="fb-root"></div>
-  <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
-
- <div class="banner-container">
-    <div class = "banner">
-     <span class="highlight">An estimate of 420 million hectares <br>of forest has been lost</span>
-    </div>
-  </div>
-  
-  <div>
-    <div class="banner-box">
-      <p class="banner-desc"> 
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vel, culpa, nulla, a ullam adipisci commodi hic nostrum earum at eum nesciunt quidem modi minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis dolor, aliquam unde ipsum maxime eveniet quo repellendus odit esse aut. Laudantium ex illo incidunt!
-      </p> 
-    </div>
-  </div>
-</section>
-
-<div id ="de-title">
-  <h1 id = "deforest-title"> Deforestation</h1>
-</div>
-
-<div class = "why-area">
-  <div class="banner-container">
-    <div class = "banner">
-     <span class="title">Why it matters</span>
-    </div>
-  </div>
-
-  <div class ="aspect-row">
-     <div class="aspect-content">
-        <h3 class="aspect">Food Security</h3> 
-        <h4 class="aspect-claim">Forests plays a crucial part as a food source</h4>
-        <div class="dimensions"">
-        <p calss="aspect-desc"> 
-          Rural and food-inscure communities consumes forest food to sustain themselves. Forests plays an important role in agriculture. Agriculural production areas that are near forests have higher porductivity and resilience than non-forest areas. It also provides farmers with agriculutral inputs such as organic matter and fiber.
-        </p> 
-     </div>
-    </div>
-    
-    <div class="aspect-content">
-      <h3 class="aspect">Health</h3>
-      <h4 class="aspect-claim">Forests provides products that benefits human health</h4> 
-      <div class="dimensions">
-        <p calss="aspect-desc"> 
-          Forests can provide products such as medicine, clean water and air, and a space where people can simply relax. Natural materials in the forest such as plants and animals carry known or potential medicinal values to humans. It can provide motivation to people to exercise which would prevent a sedentary lifestyle. Lastly, it provides physiological effects that includes better cognition and an improved immune system.
-        </p> 
-      </div>
-    </div>
-  </div>
-
-  <div class ="aspect-row">
-     <div class="aspect-content">
-        <h3 class="aspect">Tourism</h3> 
-        <h4 class="aspect-claim">Sample Text</h4>
-        <div class="dimensions"">
-        <p calss="aspect-desc"> 
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vel, culpa, nulla, a ullam adipisci commodi hic nostrum earum at eum nesciunt quidem modi minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis dolor, aliquam unde ipsum maxime eveniet quo repellendus odit esse aut. Laudantium ex illo incidunt!
-        </p> 
-     </div>
-    </div>
-    
-    <div class="aspect-content">
-      <h3 class="aspect">Biodiversity</h3>
-      <h4 class="aspect-claim">Sample Text</h4> 
-      <div class="dimensions">
-        <p calss="aspect-desc"> 
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vel, culpa, nulla, a ullam adipisci commodi hic nostrum earum at eum nesciunt quidem modi minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis dolor, aliquam unde ipsum maxime eveniet quo repellendus odit esse aut. Laudantium ex illo incidunt!
-        </p> 
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class ="stat">
-  <div class ="data-row">
-    <div class="data-content">
-      <h1 class="data-title">100 Million</h1> 
-      <h5 class="data-quant">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vel, culpa, nulla, a ullam adipisci commodi hic nostrum earum at eum nesciunt quidem modi minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis dolor, aliquam unde ipsum maxime eveniet quo repellendus odit esse aut. Laudantium ex illo incidunt!</h5>
-    </div>
-    <div class="data-content">
-      <h1 class="data-title">Trees Burned</h1> 
-      <h5 class="data-quant">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vel, culpa, nulla, a ullam adipisci commodi hic nostrum earum at eum nesciunt quidem modi minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis dolor, aliquam unde ipsum maxime eveniet quo repellendus odit esse aut. Laudantium ex illo incidunt!</h5>
-    </div>
-    <div class="data-content">
-      <h1 class="data-title">Trees Burned</h1> 
-      <h5 class="data-quant">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vel, culpa, nulla, a ullam adipisci commodi hic nostrum earum at eum nesciunt quidem modi minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis dolor, aliquam unde ipsum maxime eveniet quo repellendus odit esse aut. Laudantium ex illo incidunt!</h5>
-    </div>
-    <div class="data-content">
-      <h1 class="data-title">Trees Burned</h1> 
-      <h5 class="data-quant">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vel, culpa, nulla, a ullam adipisci commodi hic nostrum earum at eum nesciunt quidem modi minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, debitis dolor, aliquam unde ipsum maxime eveniet quo repellendus odit esse aut. Laudantium ex illo incidunt!</h5>
-    </div>
-  </div>
-</div>
-
-
-<div id="banner-what-to">
-<div class="banner-container">
-    <div class = "banner">
-     <span class="highlight">Become Part of The Legacy</span>
-    </div>
-</div>
-
-    <div>
-      <div class="banner-box">
-        <p class="banner-desc"> 
-            There are plenty of ways for you to help and get involved with I Am A Legacy. Sign up to become an official member. Volunteer in events such as the eco-camps. Donate to help us continue to build more legacies. Help share our advocacy in different social media platforms.
-        </p> 
-      </div>
-    </div>
-    <div class="bottom-arrow"></div>
-</div>
-
-<!--remember to add color for text-->
-<div class ="advocacy-part2">
-  <div class="video-box">
-    <div class="fb-video" data-href="https://www.facebook.com/watch/?v=347312403838862" data-width="auto" data-show-text="false">
-    </div>
-    <div class="vid-text">
-    <h2>Volunteer</h2>
-    <hr class= "hr-vid">
-    <h3>Eco-camp</h3>
-    <p> is one of the major activities of the project "Save Negros Forests." The camp aims to develop the youth's knowledge regarding the importance of NNNP and to empower and support local and legal cafes and not the illegal structures. </p>
-    <p>The 3-day activity provided the volunteers with research-based information about the vitality and essentiality of nature, August 13-15.</p>
-    <div id ="vid-btn">
-      <div class="btn-2-container">
-      <!--remember to change link-->
-      <a href="advocacy.html" class="btn-2">Learn More<span></span></a>
-      </div>
-    </div>
-    </div>
-  </div>
-  <!--note to complete and add better design also a way to scale image with grid item-->
-  <div class="card-container">
-    <div class ="advocacy-to-do">
-      <div class="advocacy-grid">
-        <div class ="grid-item">
-          <img src="images/donate.jpg" class ="grid-img" >
-          <h3>Donate</h3>
-          <p class = "grid-text">Your donation will help us build more legacies, Any amount is greatly appreciated</p> 
-
-          <div id ="advo-img-btn">
-            <div class="btn-3-container">
-            <!--remember to change link-->
-              <a href="advocacy.html" class="btn-3">Learn More<span></span></a>
+                <!-- NOTE: navbar turns white when we press this, so we'll have to change it -->
+                <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
+                    <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
+                    <a href="involved.html" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
+                    <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
+                    <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
+                    <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
+                </div>
             </div>
-          </div>
-
-          
         </div>
+        <div class="bottomleft"><h1 class="hero-h1">Our Advocacy</h1></div>
+    </section>
 
-        <!--
-          I just used them as a placeholder XD
-          hello i realized umuulit na yung mga images 
-             xD so if ever we can get from the sowing legacy movement fb page 
-             since they have so many   -enrique -->
-
-        <div class ="grid-item">
-          <img src="images/legacy-2.jpeg" class ="grid-img" >
-          <h3>Sign up</h3>
-          <p class = "grid-text">Register to become a member of I Am A Legacy</p> 
-
-          <div id ="advo-img-btn">
-            <div class="btn-3-container">
-            <!--remember to change link-->
-              <a href="advocacy.html" class="btn-3">Learn More<span></span></a>
+    <section id="advocacy-content">
+        <div class="w3-content">
+            <div class="advocacy-heading text-white">
+                <h1 class="advocacy-heading-h1">In the last 20 years alone, the Philippines lost over 1 million hectares of tree cover</h1>
+                <h4>That’s similar to (statistic). Deforestation destroys ecosystems, increases carbon dioxide presence in the atmosphere, and makes us more susceptible to natural disasters.</h4>
             </div>
-          </div>
-
-        </div>
-        <div class ="grid-item">
-          <img src="images/legacy-9.jpg" class ="grid-img">
-          <h3>About us</h3>
-          <p class = "grid-text"> Learn more about our organization</p> 
-
-          <div id ="advo-img-btn">
-            <div class="btn-3-container">
-            <!--remember to change link-->
-              <a href="advocacy.html" class="btn-3">Learn More<span></span></a>
+            <!-- 
+            <div class="deforestation-gallery text-white">
+                <span class="vertical-line"></span>
+                <div class="gallery-container flex-center">
+                    <div class="gallery-img">
+                        <img class="w3-image" src="images/palawan.jpg" alt="palawan">
+                    </div>
+                    <div class="gallery-location">Palawan</div>
+                </div>
+                <div class="gallery-container flex-center"></div>
             </div>
-          </div>
-
+            -->
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<footer class="w3-container">
-        <div class="w3-content w3-row">
-            <div class="w3-quarter">
-                <form action="#">
-                    <h6>Subscribe to the Legacy Newsletter </h6>
-                    <input class="w3-input" type="text" placeholder="Email">
-                    <input id="newsletter-submit" type="submit" value="Sign Up">
-                </form>  
-            <div class="w3-content w3-row w3-content">
-                <div class="social-icons">
-                    <div class="wrapper w3-padding-32">
-                        <div class="icon facebook">
-                            <div class="tooltip">Facebook</div>
-                            <span><i class="fab fa-facebook-f"></i></span>
+        <div class="forests-matter-container">
+            <div class="w3-content">
+                <div class="advocacy-heading text-white">
+                    <h1 class="advocacy-heading-h1">Why Our Forests Matter<hr></h1>
+                </div>
+                <div class="forests-matter-content">
+                    <div class="w3-row">
+                        <div class="w3-col l6">
+                            <div class="matters-card bg-white">
+                                <div class="matters-card-img">
+                                    <img src="images/drinking-water.jpg" alt="drinking-water">
+                                </div>
+                                <div class="matters-card-info">
+                                    <h2 class="advocacy-h2">Health<hr class="no-margin"></h2>
+                                    <h3><strong>Forests and trees help us live better and healthier lives</strong></h3>
+                                    <h5>Three-quarters of the world’s freshwater comes from forested watersheds. Countless medicinal plants have originated from forests. Exposing oneself to green spaces strengthens the immune system, reduces stress, lowers blood pressure, and improves focus.</h5>
+                                </div>
+                            </div>
                         </div>
-                        <div class="icon twitter">
-                            <div class="tooltip">Twitter</div>
-                            <span><i class="fab fa-twitter"></i></span>
+                        <div class="w3-col l6">
+                            <div class="matters-card bg-white">
+                                <div class="matters-card-img">
+                                    <img src="images/erosion.jpg" alt="erosion">
+                                </div>
+                                <div class="matters-card-info">
+                                    <h2 class="advocacy-h2">Protection<hr class="no-margin"></h2>
+                                    <h3><strong>Forests mitigate many natural disasters and issues</strong></h3>
+                                    <h5>Tree roots hold soil in place and let water easily seep into the ground, stopping flooding and erosion. They can also redistribute water to keep soils moist during droughts. Of course, trees are also crucial for absorbing various greenhouse gases that cause global warming.</h5>
+                                </div>
+                            </div>
                         </div>
-                        <div class="icon instagram">
-                            <div class="tooltip">Instagram</div>
-                            <span><i class="fab fa-instagram"></i></span>
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-col l6">
+                            <div class="matters-card bg-white">
+                                <div class="matters-card-img">
+                                    <img src="images/agriculture.jpg" alt="agriculture">
+                                </div>
+                                <div class="matters-card-info">
+                                    <h2 class="advocacy-h2">Agriculture<hr class="no-margin"></h2>
+                                    <h3><strong>Forests are crucial for crop yields and food security </strong></h3>
+                                    <h5>Soil erosion ruins topsoil, leading to poor crop yield and economic repurcussions. The lack of forest cover also makes croplands more susceptible to landslides and typhoons  Thus, threatening the livelihood and food security of millions of Filipinos.</h5>
+                                </div>
+                            </div>
                         </div>
-                        <div class="icon youtube">
-                            <div class="tooltip">Youtube</div>
-                            <span><i class="fab fa-youtube"></i></span>
+                        <div class="w3-col l6">
+                            <div class="matters-card bg-white">
+                                <div class="matters-card-img">
+                                    <img src="images/ph-eagle.jpg" alt="ph-eagle">
+                                </div>
+                                <div class="matters-card-info">
+                                    <h2 class="advocacy-h2">Biodiversity<hr class="no-margin"></h2>
+                                    <h3><strong>Our forests are home to thousands of native species </strong></h3>
+                                    <h5>Philippine forests boast some of the richest and most diverse ecosystems in the world, with over half of flora and fauna being native to the country. However, deforestation continues to disrupt and destroy these ecosystems, causing hundreds of species to become endangered.</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-            <div class="w3-quarter">
-                <h5>About Us</h5>
-                <h5>Donate</h5>
-            </div>
-            <div class="w3-quarter">
-                <h5>Get Involved</h5>
-                <h5>Begin Your Legacy</h5>
-
-            </div>
-            <div class="w3-quarter">
-                <h5>Our Advocacy</h5>
-            </div>
         </div>
-    </footer>
+    </section>
+    
+    <section id="what-do">
+        <div id="banner-what-to" class="text-white">
+            <div class="w3-content">
+                <div class="advocacy-heading">
+                    <h1 class="advocacy-heading-h1">What Can You Do?</h1>
+                    <h4>There are many ways you can support I Am A Legacy in the fight against deforestation. Volunteer or participate in any of our environmental events and campaigns. Support our organization by giving a one-time or monthly donation. Share our social media posts. Best of all, join us as an official member!</h4>
+                </div>
+            </div>
+            <div class="bottom-arrow"></div>
+        </div>
+        <div class="advocacy-part2">
+            <div class="w3-content">
+                <div class="w3-row container-shadow bg-white">
+                    <div class="w3-col l6">
+                        <div class="fb-video" data-href="https://www.facebook.com/watch/?v=347312403838862" data-width="auto" data-show-text="false">
+                        </div>
+                    </div>
+                    <div class="w3-col l6">
+                        <div class="vid-text">
+                            <h2 class="advocacy-h2">Volunteer<hr class="no-margin"></h2>
+                            <h3>Eco-Camp</h3>
+                            <p class="grid-text"> is one of the major activities of the Save Negros Forests campaign. The camp aims to develop the youth's knowledge regarding the importance of NNNP and to empower and support local and legal cafes and not the illegal structures. The 3-day activity provided the volunteers with research-based information about the vitality and importance of nature.</p>
+                            <a class="card-btn transparent" href="involved.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <!--note to complete and add better design also a way to scale image with grid item-->
+                <div class="card-container">
+                    <div class="advocacy-to-do">
+                        <div class="advocacy-grid">
+                            <div class="grid-item">
+                                <img src="images/donate.jpg" class ="grid-img" >
+                                <h3>Donate</h3>
+                                <p class="grid-text">Your donation will help us build more legacies, Any amount is greatly appreciated</p> 
+                                <div id="advo-img-btn">
+                                    <div class="btn-3-container">
+                                        <!--remember to change link-->
+                                        <a href="advocacy.html" class="btn-3">Learn More<span></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <img src="images/legacy-2.jpeg" class="grid-img">
+                                <h3>Sign up</h3>
+                                <p class="grid-text">Register to become a member of I Am A Legacy</p> 
+                                <div id="advo-img-btn">
+                                    <div class="btn-3-container">
+                                    <!--remember to change link-->
+                                    <a href="advocacy.html" class="btn-3">Learn More<span></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class ="grid-item">
+                                <img src="images/legacy-9.jpg" class ="grid-img">
+                                <h3>About us</h3>
+                                <p class = "grid-text"> Learn more about our organization</p> 
+                                <div id ="advo-img-btn">
+                                    <div class="btn-3-container">
+                                        <!--remember to change link-->
+                                        <a href="advocacy.html" class="btn-3">Learn More<span></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </section>
+    
+    <section id="footer">
+        <footer class="w3-container">
+            <div class="w3-content w3-row">
+                <div class="w3-quarter">
+                    <form action="#">
+                        <h6>Subscribe to the Legacy Newsletter </h6>
+                        <input class="w3-input" type="text" placeholder="Email">
+                        <input id="newsletter-submit" type="submit" value="Sign Up">
+                    </form>  
+                <div class="w3-content w3-row w3-content">
+                    <div class="social-icons">
+                        <div class="wrapper w3-padding-32">
+                            <div class="icon facebook">
+                                <div class="tooltip">Facebook</div>
+                                <span><i class="fab fa-facebook-f"></i></span>
+                            </div>
+                            <div class="icon twitter">
+                                <div class="tooltip">Twitter</div>
+                                <span><i class="fab fa-twitter"></i></span>
+                            </div>
+                            <div class="icon instagram">
+                                <div class="tooltip">Instagram</div>
+                                <span><i class="fab fa-instagram"></i></span>
+                            </div>
+                            <div class="icon youtube">
+                                <div class="tooltip">Youtube</div>
+                                <span><i class="fab fa-youtube"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="w3-quarter">
+                    <h5>About Us</h5>
+                    <h5>Donate</h5>
+                </div>
+                <div class="w3-quarter">
+                    <h5>Get Involved</h5>
+                    <h5>Begin Your Legacy</h5>
+                </div>
+                <div class="w3-quarter">
+                    <h5>Our Advocacy</h5>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    <script src="script.js"></script>
 </body>
 </html>
