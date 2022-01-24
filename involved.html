@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Get Involved</title>
+	<meta charset="UTF-8">
+    <!--I add user-scalable = no so mobile devices view remove scrolling sideways-->
+	<meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+
+    <!-- W3 CSS -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+	
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins&family=Raleway:wght@400;500;600;700&family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+     
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section id="hero-involved" class="hero-75">
+        <!-- Possible thing to add: make the navbar have a fixed position then solid background when you scroll down instead of disappearing -->
+        <div id="header">
+            <div class="navbar transparent w3-bar w3-mobile w3-left-align w3-large">
+                <a href="index.html"><img src="images/logo-edited.png" id="logo" class="navbar-item" alt="logo"></a>
+                <a href="about.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">About Us</a>
+                <a href="involved.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Get Involved</a>
+                <a href="advocacy.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Our Advocacy</a>
+                <a href="donate.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48">Donate</a>
+                <a href="signup.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 w3-right">Begin Your Legacy</a>
+                
+                <!-- Navbar for mobile -->
+
+                <!-- NOTE: navbar turns white when we press this, so we'll have to change it -->
+                <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
+                    <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
+                    <a href="involved.html" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
+                    <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
+                    <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
+                    <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottomleft"><h1 class="hero-h1">Get Involved</h1></div>
+    </section>
+
+    <section id="legacy-page"> 
+      <h1 class="section-heading-h1 w3-center text-white container-padding">Events and Campaigns</h1>
+  
+      <div class="ticket">
+        <div class="ticket-box">
+            <div class="text-container">
+              <h1 class="ticket-title">Save Negros Forests</h1>
+              <p id ="ticket-date">MM/DD/YYYY - MM/DD/YYYY</p>
+              <!-- i realized we can also eventually put like the location of the event, the fb page said this took place at Don Salvador Benedicto -->
+              <p id="ticket-des">The aim of our latest campaign is to combat the prevalent issue of deforestation in many forests throughout the region. This will be accomplished through a series of educational social media posts, online and in-person seminars, and reforestation campaigns that will take place in Don Salvador Benedicto, Negros Occidental.</p>
+              <a href="#" class="card-btn">LEARN MORE</a>
+            </div>
+            <div class="ticket-image" id="ticket1"></div>
+        </div>
+      </div>
+
+      <div class="ticket">
+        <div class="ticket-box">
+            <div class="text-container">
+              <h1 class="ticket-title">Legacy Camp Wave 8</h1>
+              <p id="ticket-date">MM/DD/YYYY - MM/DD/YYYY</p>
+              <p id="ticket-des">The eighth annual SLMi Legacy Camp is here! Develop your leadership and advocacy-building skills as you listen to talks by industry professionals from multiple fields: medicine, engineering, law, business, and more. By the end of the program, you'll be prepared to make an impact, change lives, and pay it forward.</p>
+              <a href="#" class="card-btn">LEARN MORE</a>
+            </div>
+            <div class="ticket-image" id = "ticket2"></div>
+        </div>
+      </div>
+
+      <div class="ticket">
+        <div class="ticket-box">
+            <div class="text-container">
+              <h1 class="ticket-title">Love in Time of Calamity</h1>
+              <p id ="ticket-date">MM/DD/YYYY - MM/DD/YYYY</p>
+              <p id = "ticket-des">In these trying times, the poor and marginalized need our help more than ever. Join us as we conduct outreaches for communities throughout Bacolod City and neighboring areas. If you live far away, we also accept monetary and in-kind donations that will be used to fund the program and purchase donation goods.</p>
+              <a href="#" class="card-btn">LEARN MORE</a>
+            </div>
+            <div class="ticket-image" id="ticket3"></div>
+        </div>
+      </div>
+      <a href="advocacy.html"></a>
+      <p id="fb-link" class="no-margin">Check our <a href="https://www.facebook.com/I-Am-A-Legacy-2080852895460859" id = "actual-fblink">Facebook Page</a> for more information</p>
+    
+      <!--
+          I'll comment this out for now since it hasn't fully been styled yet!
+      change links and details
+      <div class="card-container2">
+        <div class ="legacy-to-do">
+            <div class="legacy-grid">
+            <div class ="grid-item2">
+                <img src="images/legacy-8.jpg" class ="grid-img2" >
+                <h1>Volunteer</h1>
+                <a class="grid-link" href=""></a>
+            </div>
+
+            <div class ="grid-item2">
+                <img src="images/donate.jpg" class ="grid-img2" >
+                <h1>Join</h1>
+                <a class="grid-link" href=""></a>
+            </div>
+
+            <div class ="grid-item2">
+                <img src="images/donate.jpg" class ="grid-img2" >
+                <h1>Donate</h1>
+                <a class="grid-link" href=""></a>
+            </div>
+
+            <div class ="grid-item2">
+                <img src="images/donate.jpg" class ="grid-img2" >
+                <h1>Our Advocacy</h1>
+                <a class="grid-link" href=""></a>
+            </div>
+
+            </div>
+        </div>
+      </div>
+      -->
+    </section>
+
+    <footer class="w3-container">
+        <div class="w3-content w3-row">
+            <div class="w3-quarter">
+                <form action="#">
+                    <h6>Subscribe to the Legacy Newsletter </h6>
+                    <input class="w3-input" type="text" placeholder="Email">
+                    <input id="newsletter-submit" type="submit" value="Sign Up">
+                </form>  
+            <div class="w3-content w3-row w3-content">
+                <div class="social-icons">
+                    <div class="wrapper w3-padding-32">
+                        <div class="icon facebook">
+                            <div class="tooltip">Facebook</div>
+                            <span><i class="fab fa-facebook-f"></i></span>
+                        </div>
+                        <div class="icon twitter">
+                            <div class="tooltip">Twitter</div>
+                            <span><i class="fab fa-twitter"></i></span>
+                        </div>
+                        <div class="icon instagram">
+                            <div class="tooltip">Instagram</div>
+                            <span><i class="fab fa-instagram"></i></span>
+                        </div>
+                        <div class="icon youtube">
+                            <div class="tooltip">Youtube</div>
+                            <span><i class="fab fa-youtube"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="w3-quarter">
+                <h5>About Us</h5>
+                <h5>Donate</h5>
+            </div>
+            <div class="w3-quarter">
+                <h5>Get Involved</h5>
+                <h5>Begin Your Legacy</h5>
+
+            </div>
+            <div class="w3-quarter">
+                <h5>Our Advocacy</h5>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

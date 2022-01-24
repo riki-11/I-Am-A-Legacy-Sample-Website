@@ -1,8 +1,8 @@
-body,h2,h3,h4,h5,h6 {
+body,h3,h4,h5,h6 {
     font-family: "Lato", sans-serif;
 }
 
-.w3-bar, h1, button, #navmenu, #events h2 {
+.w3-bar, h1, h2, #navmenu {
     font-family: "Raleway", sans-serif;
 }
 
@@ -10,13 +10,30 @@ h1 {
     font-weight: 700;
 }
 
+h2 {
+    color: #164DB6;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: #222B2F;
+    font-size: 20px;
+    line-height: 37px;
+}
+
+hr {
+    border: 1px solid #C9C4C4;
+    margin: 10px 0px 25px;
+}
+
 .w3-top {
-    /* Just testing out for Git merge */
-    z-index: 3;
+    z-index: 2;
 }
 
 .w3-bar {
-    background-color: #151F90;
     color: white;
     font-weight: 600;
 }
@@ -26,29 +43,35 @@ h1 {
 }
 
 .w3-content {
-    max-width: 1300px;
+    max-width: 1500px;
     position: relative;
     z-index: 1;
 }
 
+.no-margin {
+    margin: 0;
+}
+
+.auto-margin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #logo {
     float: left;
-    height: 120px;
+    height: 135px;
     max-width: 100%;
 }
 
-/* CSS for Curves */
 .curved {
     position: relative;
 }
 
-/* CSS for main content of the page */
-.main-content{
-    padding-top: 123px;
-}
-
 .main-donatepage, .main-signup-page{
-  padding-top: 180px;
+  padding-top: 60px;
+  background: linear-gradient(90deg, rgba(19,54,74,1) 0%, 
+    rgba(28,78,105,1) 54%, rgba(25,59,84,1) 100%);
+  color: white;
 }
 
 .main-donatepage input, .main-signup-page input{
@@ -56,16 +79,20 @@ h1 {
     padding: 12px 20px;
     margin: 8px 0 15px;
     display: block;
-    border: 1px solid #ccc;
+    border: transparent;
     border-radius: 4px;
     box-sizing: border-box;
 }
-    
+
 .main-donatepage .form-inline, .main-signup-page .form-signup{
     width: 50%;
     margin: 0 auto;
-    text-align:left;
+    text-align: left;
     padding-bottom: 75px;
+}
+
+#join-now:hover {
+    cursor: pointer;
 }
 
 .main-donatepage input[type=submit], .main-signup-page input[type=submit]{
@@ -94,75 +121,561 @@ input[type=reset]{
   padding-bottom: 10px;
 }
 
-/* For the image slider on the front page */
-#slider {
-    height: 70vh;
+
+/* CSS for new index.html page */
+
+#header {
+    position: relative;
+    padding-top: 15px;
+    margin-left: 1%;
+    margin-right: 1%;
+    z-index: 2;
+}
+
+/* index.html page has a different height */
+
+.hero-full, .hero-75 {
+    position: relative;
+    background: no-repeat center;
+    background-size: cover;
+}
+
+.hero-full {
+    min-height: 100vh;
     width: 100vw;
-    position: relative;
-    text-shadow: 3px 3px 10px #3d3c3c;
-    overflow: hidden;
 }
 
-#slider figure {
-    position: relative;
-    width: 400%;
-    margin: 0;
-    left: 0;
-    animation: 10s slider infinite;
+.hero-full::before {
+    min-height: 100%;
+    width: 100vw;
 }
 
-#slider figure img {
-    width: 25%;
-    float: left;
-    position: relative;
-} 
-
-img[alt="forest"] {
-    bottom: 17em;
+.hero-75 {
+    min-height: 75vh;
+    width: 100vw;
 }
 
-#sowing-imgs img {
-    border-radius: 8px;
-    box-shadow: 2.5px 2.5px 7px gray;
+.hero-75::before {
+    min-height: 100%;
+    width: 100vw;
 }
 
-@keyframes slider {
-    0% {left: 0;}
-    25% {left: 0;}
-    30% {left: -100%;}
-    50% {left: -100%;}
-    55% {left: -200%;}
-    75% {left: -200%;}
-    80% {left: -300%}
-    100% {left: -300%;}
-}
-
-.overlay {
+.hero-75::before, .hero-full::before, .forests-matter-container::before {
+    content: ' ';
     position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#hero-index {
+    background-image: url("images/youth.jpg");
+}
+
+/* Since the hero-index doesn't need an overlay */
+#hero-index::before {
+    background-color: transparent;
+}
+
+#hero-involved {
+    background-image: url("images/legacy-7.jpg");
+}
+
+#hero-about {
+    background-image: url("images/legacy-6.jpg");
+}
+
+#hero-donate {
+    background-image: url("images/helping.jpg");
+}
+
+#hero-advocacy {
+    background-image: url("images/deforestation-2.jpg");
+}
+
+#hero-signup{
+    background-image: url("images/legacy-10.jpg");
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.navbar {
+    /* note to fix the padding and stuff for the navbar elements */
+    width: 100%;
+}
+
+.navbar-item {
+    padding: 8px 16px;
+    width: auto;
+    display: inline-block;
+    border: none;
+    outline: 0;
+}
+
+.navbar-btn:hover {
+    text-shadow: 2px 2.5px 5px rgba(211, 209, 209, 0.3);
+}
+
+
+/* note to self: if we still have time, apply these classes to other classes to reduce css repetition */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.hero-text {
+    position: relative;
+    max-width: 1350px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0.01rem 1rem;
+}
+
+.hero-h1 {
+    font-size: 106px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+#hero-h1-index {
+    letter-spacing: clamp(0px, 1vw, 9px);
+    font-size: clamp(3rem, 6.8vw, 6.5rem);
+}
+
+#join-btn {
+    padding: 0 40px;
+    line-height: 50px;
+    font-size: 25px;
+    margin: 20px;
+    border: 3px solid white;
+    transition: 0.2s linear;
+}
+
+#join-btn:hover, #join-btn:active {
+    background-color: #fff;
+    color: #164DB6;
+}
+
+#home-content, #advocacy-content, #what-do {
+    background: linear-gradient(90deg, rgba(19,54,74,1) 0%, 
+    rgba(28,78,105,1) 54%, rgba(25,59,84,1) 100%);
+}
+
+.text-white {
+    color: white;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.container-shadow {
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container-overlap {
+    width: 100%;
+}
+
+.img-shadow {
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.img-overlap {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-overlap-left {
+    margin-left: 50px;
+}
+
+.img-overlap-right {
+    margin-left: -50px;
+}
+
+.container-padding {
+    padding: 20px 35px 40px;
+}
+
+.responsive-h2 {
+    font-size: clamp(2.5rem, 5.5vw, 3.3rem);
+    font-weight: 600;
+    line-height: 59px;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+#about-left {
+    flex: 2.8;
+}
+
+/* note to self: if there's still time, make a class for this? */
+#about-left p {
+    white-space: normal;
+    width: 90%;
+}
+
+.card-btn {
+    color: #164DB6;
+    border: 1px solid #164DB6;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.2s linear;
+    padding: 10px 20px;
+}
+
+.card-btn:hover, .card-btn:active {
+    background-color: #164DB6;
+    color: white;
+}
+
+.card-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 2px 2px 4px #00000061;
+    opacity: 0;
+    transition: 0.2s linear;
+}
+
+.card-btn:hover::after, .card-btn:active::after {
+    opacity: 1;
+}
+
+#about-right {
+    flex: 2.5;
+    height: auto;
+}
+
+#row-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#row-2 img {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+}
+
+#row-2 > div {
+    display: inline-block;
+    width: 45%;
+}
+
+#scholar-right, #tree-left {
+    flex: 1.15;
+}
+
+#scholar-right .w3-row {
+    margin-bottom: 10px;
+}
+
+#scholar-left, #tree-right {
+    flex: 0.85;
+}
+
+.donate-img {
+    height: 750px;
+    object-fit: cover;
+}
+
+.interval-hr {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+
+.active {
+    color: #164DB6;
+    border-color: #164db6;
+}
+
+.active:hover {
+    cursor: pointer;
+    transform: scale(1.01, 1.01);
+}
+
+.active hr {
+    border: 1px solid #164DB6;
+}
+
+.inactive {
+    color: #999;
+    border-color: #999;
+    opacity: 0.5;
+}
+
+.active, .inactive {
+    user-select: none;
+}
+
+.inactive:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transform: scale(1.01, 1.01);
+}
+
+#donate-index .donate-padding {
+    padding: 20px 7% 35px;
+}
+
+.width-90-center {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.donate-option {
+    display: flex;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.donate-info {
+    text-align: center;
+    color: hsla(198, 16%, 16%, 70%);
+    margin-top: 7px;
+}
+
+.donate-icon {
+    height: 128px;
+    width: 128px;
+}
+
+.denomination {
+    font-family: "Lato", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.card-btn-donate {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-align: center;
+    background-color: #164db6;
+    box-shadow: 2px 2px 4px #00000061;
+    transition: 0.2s linear;
+}
+
+.card-btn-donate:hover {
+    background-color: #2a5fc6;
+}
+
+/* End of CSS for index-2.html page */
+
+/* Start of CSS for revised donate.html page */
+#donate-section {
+    max-width: 1700px;
+    padding: 1%;
+    align-items: flex-start;
+}
+
+.donate-heading {
+    flex: 0.9;
+    text-align: center;
+    padding: 1%;
+}
+
+.donate-heading-h1 {
+    font-size: clamp(3rem, 3.8vw, 5.3rem);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+#donate-section .donate-padding {
+    padding: 10px 1% 30px;
+}
+
+.donate-container {
+    flex: 1;
+    padding: 0 2%;
+}
+
+.donate-form {
+    color: #544e4e;
+    padding: 15px 2.5%;
+}
+
+.donate-form-input {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+}
+
+.donate-form-label {
+    font-size: 18px;
+    text-align: left !important;
+}
+
+.donate-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.donate-input-name {
+    width: 90%;
+}
+
+#l-name, label[for="l-name"] {
+    width: 80%;
+    margin-left: auto;
+}
+
+#email {
+    width: 90%;
+}
+
+#payment, label[for="payment"] {
+    width: 80%;
+    margin-left: auto;
+    background-color: white;
+}
+
+/* End of revised donate.html page CSS */ 
+
+/* Additional classes for advocacy.html page */
+
+.advocacy-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2.2%;
+}
+
+.section-heading-h1 {
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+    font-size: clamp(3rem, 4.5vw, 5.3rem);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+.section-heading-h1 hr {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid white;
+}
+
+.deforestation-gallery {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-line {
+    display: block;
+    height: 100%;
+    border-left: 3px solid white;
+    width: 1px;
+    position: absolute;
+    z-index: -1;
+}
+
+.gallery-container {
+    width: 100%;
+}
+
+.gallery-img {
+    flex: 1.7;
+}
+
+.gallery-location {
+    flex: 1;
+    font-size: 50px;
+}
+
+.forests-matter-container {
+    background: url("images/deforestation-3.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+    padding-top: 5%;
+}
+
+.forests-matter-container::before {
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.38);
-    color: white;
+}
+
+.matters-card {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 1;
+    min-height: 250px; /* Change this to something else later on */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-.overlay h1 {
-    color: white !important;
+.matters-card-img {
+    flex: 1;
 }
 
-#about-content .overlay {
-    height: 90%;
+.matters-card-img img {
+    height: 100%;
+    width: 100%;
+    max-height: 500px; /* edit this later on to whatever the right size should be */
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-#about-content .overlay h1 {
+.advocacy-h2 {
     font-size: 50px;
-    margin: 1em;
-    text-align: center;
+    font-weight: 600;
+    margin: 0;
+    align-self: stretch;
 }
+
+.matters-card-info {
+    color: #222B2F;
+    flex: 1.7;
+    padding: 5px 20px;
+}
+
+/* End of additional classes for advocacy.html page */
 
 #grid-1 hr {
     margin: 0;
@@ -180,7 +693,6 @@ img[alt="forest"] {
 #grid-2 .w3-half:nth-child(2) {
     padding-right: 20px;
 }
-
 
 #grid-2 .w3-button:hover {
     background-color: transparent !important;
@@ -211,165 +723,6 @@ img[alt="forest"] {
 
 #grid-2 img {
     border-radius: 40px;
-}
-
-.btn-1-container {
-    border: 2.5px solid white;
-    border-radius: 8px;
-    text-align: center;
-    width: 140px;
-    height: 46px;
-    padding: 8.5px;
-    transition: 0.3s;
-}
-
-.btn-1-container:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 2.5px solid rgba(0, 0, 0, 0);
-}
-
-.btn-1 {
-    font-size: 16.5px;
-    text-decoration: none;
-    color: white;
-}
-
-/* To make an entire block link to an "a" tag */
-.text-overlay {
-    color: white;
-    text-shadow: 3px 3px 6px gray;
-    width: 100%;
-    height: 100%;
-}
-
-.text-overlay h1 {
-    font-size: 55px;
-}
-
-.text-overlay h2 {
-    font-size: 50px;
-}
-
-.text-overlay span {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-#advocacy {
-    margin-bottom: 12px;
-}
-
-/* Makes it so that the image resizes responsively but can only grow until 450px in height */
-#advocacy img {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-    max-height: 450px;
-}
-
-#advocacy .gradient-overlay::after {
-    /*
-        Just placed these gradient combinations here in case I change my mind
-        #bdc3c7, #2c3e50
-        Royal Blue: #141E30 #243B55 (340deg 0.35 opacity)
-        Friday: #83a4d4 #b6fbff (150deg 0.30)
-        Moss: #134E5E #71B280
-    */
-    /* NOTE TO SELF: maybe can add a transition on hover? */
-    background-image: linear-gradient(150deg, #134E5E, #71B280);
-    opacity: 0.35;
-}
-
-#events {
-    /* Placed this so that all the images within the carousel will have the same height */
-    height: 365px;
-}
-
-#events img, #donate img {
-    max-height: 365px;
-}
-
-#events img {
-    animation: 1s fade ease;
-}
-
-@keyframes fade {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-#events .w3-button {
-    font-size: 2rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    color: white;
-}
-
-#events .w3-button:hover {
-    font-size: 2.1rem;
-    text-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.7);
-}
-
-#events .text-overlay, #donate .text-overlay {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-#events .gradient-overlay::after {
-    /*
-        Tested Colors: 
-            150deg, #2c3e50, #3498db
-     */
-    background-image: linear-gradient(150deg, #2c3e50, #3498db);
-    opacity: 0.4;
-}
-
-#donate .gradient-overlay::after {
-    /*
-        Tested Colors: 
-            300 deg, #8e9eab, #eef2f3 0.5
-            340deg, #00467F, #A5CC82  0.4
-    */
-    background-image: linear-gradient(340deg, #00467F, #A5CC82);
-    opacity: 0.4;
-}
-
-.w3-badge {
-    height: 13px;
-    width: 13px;
-    padding: 0;
-    cursor: pointer;
-}
-
-.carousel-dot {
-    border: 1px solid #ffffff70;
-}
-
-/* Grid-2 Curve SVG CSS */
-
-.wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 167px;
-}
-
-.wave .shape-fill {
-    fill: #FFFFFF;
 }
 
 footer {
@@ -405,85 +758,6 @@ footer input {
     box-shadow: 1px 1px 3px gray;
     background-color: white;
     color: #151F90;
-}
-
-/* responsive design for smartphone screen sizes only */
-@media screen and (min-width: 320px) and (max-width: 840px){
-    .w3-jumbo {
-        font-size: 30px !important;
-        text-align: center;
-    }
-
-    body,h1,h2,h3,h4,h5,h6 {
-        text-align: center;
-    }
-
-    #grid-2 {
-        padding-top: 170px;
-    }
-
-    img[alt="forest"] {
-        bottom: auto;
-    }
-
-    img[alt="volcano"] {
-        bottom: auto;
-    } 
-    /*
-        NOTE: add responsiveness for these stuff
-
-        .text-overlay h1 {
-            font-size: 25px;
-        }
-        images in #grid-2 {
-            center them all at a certain px width
-        }
-    */
-    img {
-        width: 320px;
-        height: 300px;
-    }
-
-    #slider figure img {
-        width: 25%;
-    } 
-
-    footer input {
-        text-align: center;
-    }
-
-    .main-signup-page .form-signup img{
-        height: 200%;
-    }
-
-    /* For What We Do Section icons, remove hidden divs from the body */
-    .hidden-text {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 840px) and (orientation: portrait){
-  #slider {
-    height: 35vh;
-  } 
-  #sowing-imgs img {
-    margin-top: 5px;
-    margin-bottom: 20px; 
-  }
-
-  .main-donatepage .form-inline, .main-signup-page .form-signup{
-    width: 75%;
-    margin: 0 auto;
-    text-align:left;
-    padding-bottom: 75px;
-  }
-
-  .btn-1-container{
-    display: block;
-    width: auto;
-    height: auto;
-    float: none;
-  }
 }
 
 .social-icons {
@@ -605,7 +879,8 @@ footer input {
     overflow: hidden;
     background: rgb(182, 180, 180, 0.8);  /* fallback for old browsers */
     background: linear-gradient(rgba(182, 180, 180, 0.8), rgba(53, 83, 252, 0.8)), url("images/deforestation.jpg");  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(rgba(182, 180, 180, 0.8), rgba(53, 83, 252, 0.8)), url("images/deforestation.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(rgba(182, 180, 180, 0.8), rgba(53, 83, 252, 0.8)), url("images/deforestation.jpg"); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -622,7 +897,6 @@ footer input {
 #deforest-title{
   color: #163DA6;
   text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
-  width: 50%;
   margin: 0 auto;
 }
 
@@ -634,7 +908,6 @@ footer input {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-    text-align: left;
 }
 
 .aspect-row{
@@ -643,8 +916,6 @@ footer input {
     margin-right: auto;
     display: flex; 
     justify-content: space-between;
-    text-align: left;
-    flex-direction: row;
     column-gap: 10px;
     padding-top: 30px;
 }
@@ -691,115 +962,95 @@ footer input {
 }
 
 .title:after {
-  content: '';
-  display: block;
-  border-top: 6px solid rgb(179, 179, 179);
-  margin-top: 0.5em;
+    content: '';
+    display: block;
+    border-top: 6px solid rgb(179, 179, 179);
+    margin-top: 0.5em;
 }
 
 .data-title{
-  font-weight: 600;
-  color: navy;
-  flex: 1;
+    font-weight: 600;
+    color: navy;
+    flex: 1;
 }
 
 .data-quant{
-  flex:1;
-}
-
-.aspect-claim{
-  text-align: left;
-  font-weight: bold;
-}
-
-.banner-container{
-  padding-top: 56px;
-  padding-bottom: 10px;
-}
-
-.banner{
-  font-size: 36px;
-  display: block;
-  font-weight: bold;
-  text-align: center;
-}
-
-.banner-desc{
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex; 
+    flex:1;
 }
 
 #banner-btn{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner-box{
-  margin: auto;
-  width: 50%;
+    margin: auto;
+    width: 50%;
 }
 
-.advocacy-part2{
-  padding-bottom: 128px;
-  padding-top: 24px;
+.advocacy-part2 {
+    padding: 0.8% 1% 1%;;
+}
+
+
+.advocacy-part2 .w3-content {
+    padding: 0;
 }
 
 #banner-what-to{
-  background-color: #195BF2;
-  color:white;
-  margin-bottom: 50px;
+    color:white;
+    text-align: center;
 }
 
-.bottom-arrow:after{
-    content:'';
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 0;
-    height: 0;
-    border-top: 25px solid #195BF2;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
+/* This is to make the icons overlap with the previous section */
+.facts-container {
+    margin-top: -7.5%;
 }
 
-.bottom-arrow {
-      border-bottom: 5px solid #195BF2;
-      padding-top: 30px;
+.fact {
+    padding: 10px;
+    margin-bottom: 3.5%;
 }
 
-
-.video-box{
-  display: flex;
-  margin: 0 auto;
-  width: 75%;
-  height: auto;
+.fact-icon-bg {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
 }
 
-.fb-video{
-  margin: 0 auto;
-  width: 100%;
-  display: block;
-  height: 100%;
+.fact-icon {
+    height: 175px;
+    width: 175px;
+    filter: drop-shadow(2px 2px 4px #7386e670);
 }
 
-.vid-text{
-  display: flex;
-  flex-direction: column;
-  padding-left: 15px;
-  flex-wrap: wrap;
+.fact-heading {
+    font-family: "Raleway", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    /* note to self: when there's time, make a class for this shadow named heading-shadow */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
 }
 
-.vid-text h2{
-  color: #163DA6;
-  text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
+.fact-info {
+    text-align: center;
 }
 
-.vid-text h3{
-  color: #195BF2;
+.fact-info strong {
+    color: #7aaeff;
+}
+
+.vid-text {
+    padding: 1% 4% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.vid-text p {
+    margin-top: 0;
 }
 
 #vid-btn{
@@ -809,304 +1060,95 @@ footer input {
   justify-content: flex-start;
 }
 
-.btn-2-container {
-  margin-top: auto; 
-  text-align: center;
-  width: 140px;
-  height: 46px;
-  padding: 8.5px;
-  transition: 0.3s;
-  background-color:#1966F9;
-  position: relative;
-  left:0;
-}
-
-.btn-2-container:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 2.5px solid rgba(0, 0, 0, 0);
-}  
-  
-.btn-2 {
-  font-size: 16.5px;
-  text-decoration: none;
-  color: white;
-}
-
-.card-container{
-  padding-top: 75px;
-  width: 75%;
-  margin: 0 auto;
-}
-
-.advocacy-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 24px;
-}
-.grid-item {
-  background-color: #D1D6E9;
-  text-align: left;
-  box-shadow: 0 1px 8px rgb(0 0 0 / 16%);
-  min-height: 600px;
-  border-radius: 4px;
-  position: relative;
-  border: 1px solid #E5E9f5;
-}
-
-.grid-item:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.grid-item h3{
-  color: #163DA6;
-  text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
-  padding-top: 20px;
-  padding: 2px 16px;
-}
-
-.grid-item p{
-  padding: 2px 16px;
-}
-
-.grid-img{
-  object-fit: cover;
-  width: 100%;
-  height: 65%;
-  position: relative;
-}
-
-.advo-img-btn{
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.btn-3-container {
-  text-align: center;
-  width: 140px;
-  height: 46px;
-  transition: 0.3s;
-  background-color:#1966F9;
-  position: absolute;
-  line-height: 1;
-  padding: 10px 20px;
-  right: 6px;
-  bottom: 5px;
-  left: auto;
-  margin: 0;
-}
-
-.btn-3-container:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 2.5px solid rgba(0, 0, 0, 0);
-}  
-  
-.btn-3{
-  font-size: 16.5px;
-  text-decoration: none;
-  color: white;
-}
-
 /* CSS for about.html page */
-.large-background {
-    width: 100%;
-    height: 90vh;
-
-    background-image: url("images/legacy-5.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#about-content {
+    background: linear-gradient(90deg, rgba(19,54,74,1) 0%, 
+    rgba(28,78,105,1) 54%, rgba(25,59,84,1) 100%);
 }
 
+/*
 #about-content h1 {
     color: #163DA6;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-size: 45px;
 }
-
+*/
 #about-content section {
     padding-top: 64px;
 }
 
-#vision-mission {
-    background-color: #D1D6E9;
+.core-content {
+    display: flex;
 }
 
-#vision-mission h5 {
-    padding: 10px 2em;
+.core-padding {
+   padding: 3% 3% 2%;
 }
 
-.icon {
-    height: auto;
+.core-card {
+    padding: 2%;
+    min-height: 100%;
+    margin-bottom: 3%;
+    flex: 1;
 }
 
-#vision-mission .icon {
-    max-width: 40%;
+.core-icon {
+    height: 200px;
+    width: 200px;
     filter: drop-shadow(7px 7px 1px #7386e670);
 }
 
-.wave-2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+#beginning-left {
+    flex: 1.2;
 }
 
-.wave-2 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 81px;
-    transform: rotateY(180deg);
+#beginning-right {
+    flex: 1;
 }
 
-.wave-2 .shape-fill {
-    fill: #D1D6E9;
-}
-
-#beginning-img {
-    padding: 2.5em;
-}
-
-#what-we-do {
-    background-color: #D1D6E9;
+.beginning-content {
+    width: 95%;
 }
 
 .what-we-do-info {
-    text-align: left;
-    padding-left: 0.7em;
+    flex: 1.3;
+    padding: 15px 30px 20px;
 }
 
-#what-we-do h2 {
-    color: #2160C8;
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    font-size: 27px;
+.what-we-do-img {
+    flex: 1;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.what-we-do-img img {
+    height: 360px;
+    width: 360px;
+    object-fit: cover;
 }
 
 #what-we-do .w3-content > div:not(:first-child) {
     margin-bottom: 3em;
 }
 
-@media screen and (min-width: 320px) and (max-width: 700px) {
-    .what-we-do-info {
-        text-align: center;
-        padding-left: 0;
-    }
-
-    #what-we-do .w3-content > div {
-        margin-bottom: 3em;
-    }
-}
-
-@media screen and (min-width: 701px) {
-    .what-we-do-info h2, .what-we-do-info h5 {
-        text-align: left;
-    }
-}
-
-#what-we-do .icon {
-    width: auto;
-    position: relative;
-}
-
-#what-we-do .icon[alt="green-earth"] {
-    width: 163px;
-    bottom: 29%;
-    right: 9.75%;
-}
-
-.icon[alt="leadership"] {
-    left: 1em;
-}
-
-.icon[alt="handshake"] {
-    top: 0.5em;
-}
-
-.bg-circle, .team-bg {
-    /* inline-block allows the span to show up even w/o content */ 
-    display: inline-block;
-    border-radius: 50%;
-}
-
-.bg-circle {
-    /* note: maybe change the height and width to 165 px */
-    height: 135px;
-    width: 135px;
-    background-color: #fff;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-}
-
 .hidden-text {
     visibility: hidden;
 }
 
-.wave-3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.wave-3 svg {
-    position: relative;
-    display: block;
-    width: calc(102% + 1.3px);
-    height: 69px;
-}
-
-.wave-3 .shape-fill {
-    fill: #FFFFFF;
-}
-
 #team {
-    margin-bottom: 64px;
-}
-
-#team h4 {
-    color: #2160C8;
-    font-weight: bold;
-}
-
-.team-bg {
-    /* Note: eventually change the height to relative units for responsiveness */
-    height: 275px;
-    width: 275px;
-    background-color: #D1D6E9;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    padding: 3%;
 }
 
 .team-image {
-    width: 100%;
-    height: auto;
+    height: 325px;
+    width: 325px;
+    filter: drop-shadow(7px 6px 3px #21222470);
 }
 
-.wave-4 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave-4 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 126px;
-}
-
-.wave-4 .shape-fill {
-    fill: #D1D6E9;
+.team-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 /*get inovlved page*/
@@ -1126,19 +1168,569 @@ footer input {
   opacity: 0.45;
 }
 
-.bottomleft {
-  position: absolute;
-  bottom: 8px;
-  left: 32px;
-  font-size: 120px;
+
+#legacy-h1 {
+  text-align: center;
+  padding-bottom: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0;
   color: white;
-  z-index: 1;
+  padding-top: 64px;
 }
 
-#legacy-h1{
+#legacy-page{
+  background: linear-gradient(90deg, rgba(19,54,74,1) 0%, 
+  rgba(28,78,105,1) 54%, rgba(25,59,84,1) 100%);
+  padding: 2%;
+}
+
+.ticket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-box {
+  background-color: white;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+}
+
+.ticket-title {
+  font-weight: 600;
+  font-size: clamp(2.5rem, 5.5vw, 3.3rem);
+  margin: 0 0 15px;
+  color: #164DB6;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
+}
+
+#ticket-date{
+  font-weight: 300;
+  line-height: 24px;
+  margin: 0 0 30px 0;
+}
+
+#ticket-des{
+  margin: 0 0 30px 0;
+}
+
+.ticket-image{
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.text-container {
   text-align: center;
-  padding-top: 25px;
-  padding-bottom: 50px;
+  padding: 20px 35px 40px;
+}
+
+.bottomleft {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin: 0 1%;
+    color: white;
+}
+
+.btn-4-container {
+  text-align: center;
+  width: 160px;
+  height: 50px;
+  transition: 0.3s;
+  background-color:#163DA6;
+  line-height: 1;
+  padding: 15px 20px;
+  margin: auto;
+  border: 2.5px solid white;
+}
+
+.btn-4-container:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2.5px solid rgba(0, 0, 0, 0);
+}
+
+.btn-4 {
+    font-size: 16.5px;
+    text-decoration: none;
+    color: white;
+  }
+
+#ticket1{
+  background-image: url("images/legacy-1.jpeg");
+}
+
+#ticket2{
+  background-image: url("images/legacy-4.jpg");
+}
+
+#ticket3{
+  background-image: url("images/donate.jpg");
+}
+
+.grid-item2 h1{
   color: #163DA6;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
+  text-align: center;
+}
+
+.grid-item2 {
+  background-color: white;
+  text-align: left;
+  box-shadow: 0 1px 8px rgb(0 0 0 / 16%);
+  border-radius: 4px;
+  position: relative;
+}
+
+.grid-item2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-container2{
+  padding-top: 128px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-bottom: 128px;
+}
+
+.grid-img2{
+  object-fit: cover;
+  width: 100%;
+  position: relative;
+}
+
+.grid-link{
+  display: block;
+  margin: 0.25em;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.grid-link:before{
+  content: '';
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+#fb-link{
+  text-align: center;
+  color: white;
+}
+
+#actual-fblink{
+  color: skyblue;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+}
+
+.timeline::before {
+    content:'';
+    position: absolute;
+    left: 49.55%;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: 5px solid white;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.timeline-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.timeline-text{
+  padding: 2px 16px;
+  width : 30%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 36px;
+  margin: 0 0 15px;
+  color: white;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.timeline-img-box{
+	width : 70%;
+}
+
+.timeline-img{
+    height: 100%;
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.651);
+}
+
+#timeline-img3{
+  margin-bottom: -7.5%;
+}
+
+.timeline-icon{
+    height: 150px;
+    width: 150px;
+}
+
+/* ALL MEDIA QUERIES SHOULD BE AT BOTTOM OF FILE */
+@media screen and (max-width: 1530px) and (min-width: 1139px) {
+    .w3-content {
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (max-width: 1139px) {
+    .responsive-centered {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .responsive-width {
+        width: 100%;
+        /* add margin: 0; or margin left and right 0 */
+    }
+
+    .flex-center {
+        flex-direction: column;
+    }
+    
+    #donate-section {
+        align-items: center;
+    }
+
+    #about-right {
+        max-height: 500px;
+        margin: 0;
+    }
+    
+    #row-2 {
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #row-2 > div {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .img-overlap {
+        margin: 0;
+        height: auto;
+        max-height: 450px;
+    }
+ 
+    .beginning-content {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+    .donate-icon {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .donate-option {
+        min-height: 162px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 840px){
+
+    .hero-h1 {
+        font-size: 80px;
+    }
+
+    .bottomleft {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .w3-jumbo {
+        font-size: 30px !important;
+        text-align: center;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        text-align: center;
+    }
+
+    #grid-2 {
+        padding-top: 170px;
+    }
+
+    img[alt="forest"] {
+        bottom: auto;
+    }
+
+    img[alt="volcano"] {
+        bottom: auto;
+    }
+
+    footer input {
+        text-align: center;
+    }
+
+    .main-signup-page .form-signup img{
+        height: 200%;
+    }
+
+    .hidden-text {
+        display: none;
+    }
+
+    #about-left h2, #about-left p {
+        width: 100%;
+    }
+
+    .responsive-centered {
+        text-align: center;
+    }
+
+    .vid-text {
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 840px) and (orientation: portrait){
+  .btn-2-container {
+    margin: auto;
+  }
+
+
+  .grid-text {
+    text-align: center;
+  }
+
+  .aspect-claim{
+    text-align: center;
+  }
+
+
+  .aspect{
+    text-align: center;
+  }
+
+  .aspect-row {
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+  }
+
+  .grid-item2 {
+  min-height: 200px;
+  } 
+
+  #legacy-h1{
+    font-size: 24px;
+  }
+
+  .card-container2{
+    width: 80%;
+  }
+
+  .btn-4-container {
+    margin: auto;
+    position: relative;
+  }
+
+  .legacy-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 50px;
+  }
+  
+  .ticket-box{
+    background-color: white;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+  }
+  
+  #sowing-imgs img {
+    margin-top: 5px;
+    margin-bottom: 20px; 
+  }
+
+  .main-donatepage .form-inline, .main-signup-page .form-signup{
+    width: 75%;
+    margin: 0 auto;
+    text-align:left;
+    padding-bottom: 75px;
+  }
+
+  .btn-1-container{
+    display: block;
+    width: auto;
+    height: auto;
+    float: none;
+  }
+}
+
+/* note to self: maybe add these media queries to others to reduce complexity */
+@media screen and (min-width: 320px) and (max-width: 700px) {
+    .what-we-do-info {
+        text-align: center;
+    }
+
+    #what-we-do .w3-content > div {
+        margin-bottom: 3em;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .what-we-do-info h2, .what-we-do-info h5 {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+  .video-box{
+    display: flex;
+  }
+
+  .aspect-claim{
+    text-align: left;
+  }
+
+  .aspect-row{
+    flex-direction: row;
+    text-align: leff;
+  }
+
+  .aspect{
+    text-align: left;
+  }
+
+  #deforest-title{
+    width: 50%;
+  }
+
+  .grid-img2{
+    height: 90%;
+  }
+
+  .btn-4-container {
+    position: relative;
+    margin: 0;
+  }
+
+  .card-container2{
+    width: 90%;
+  }
+
+  .grid-item2 {
+    min-height: 600px;
+  } 
+
+  .legacy-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 50px;
+  }
+
+  .ticket-box{
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .ticket-image{
+    height: 470px;
+    min-width: 500px;
+  }
+  
+ .text-container {
+    text-align: left;
+    max-width: 660px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .ticket-box{
+    max-width: 1200px;
+  }
+}
+
+/* For w3.css small screens */ 
+@media screen and (max-width: 600px) {
+    .donate-input-name, #l-name, label[for="l-name"], #email {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .matters-card {
+        flex-direction: column;
+    }
+
+    .matters-card-img, .matters-card-info {
+        flex: 1;
+    }
+
+    .matters-card-img {
+        max-height: 400px;
+    }
+}
+
+/* For w3.css medium screens */ 
+@media screen and (max-width: 992px) {
+    #payment, label[for="payment"] {
+        width: 100%;
+        margin-left: 0;
+    }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Donate</title>
+    <title>Sign Up</title>
     <meta charset="UTF-8">
     <!--I add "user-scalable = no" so mobile devices view remove scrolling sideways -->
 	<meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
@@ -21,38 +21,43 @@
 
 <body>
     
-    <!-- Navbar -->
-   <div class="w3-top w3-mobile">
-        <div class="w3-bar w3-card w3-left-align w3-large">
-            <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large w3-indigo" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-            
-            <a href="index.html"><img src="images/legacy-logo.jpg" id="logo" class="w3-bar-item" alt="logo"></a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">About Us</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Get Involved</a>
-            <a href="advocacy.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Our Advocacy</a>
-            <a href="signup.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Begin Your Legacy</a>
-            <a href="donate.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white w3-right">Donate</a>
-        </div>
+    <section id="hero-signup" class="hero-75">
+        <!-- Possible thing to add: make the navbar have a fixed position then solid background when you scroll down instead of disappearing -->
+        <div id="header">
+            <div class="navbar transparent w3-bar w3-mobile w3-left-align w3-large">
+                <a href="index.html"><img src="images/logo-edited.png" id="logo" class="navbar-item" alt="logo"></a>
+                <a href="about.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">About Us</a>
+                <a href="involved.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Get Involved</a>
+                <a href="advocacy.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 ">Our Advocacy</a>
+                <a href="donate.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48">Donate</a>
+                <a href="signup.html" class="navbar-item navbar-btn w3-hide-small w3-hide-medium w3-padding-48 w3-right">Begin Your Legacy</a>
+                
+                <!-- Navbar for mobile -->
 
-    <!-- Navbar on small screens -->
-        <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
-            <a href="index.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
-            <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
-            <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
-            <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
+                <!-- NOTE: navbar turns white when we press this, so we'll have to change it -->
+                <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
+                    <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
+                    <a href="involved.html" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
+                    <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
+                    <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
+                    <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="bottomleft"><h1 class="hero-h1">Begin Your Legacy</h1></div>
+    </section>
+
     
     <section class="main-signup-page"> 
       <form class="form-signup">
-        <h1>Sower's Legacy Form</h1>
-        <h6>Sowing Legacy Movement is a network of committed individuals working together to bring positive change through concrete actions and love.</h6>
+        <h1 class="section-heading-h1">Become a member of I Am A Legacy!</h1>
+        <p class="text-white w3-center">Join us in our journey as we inspire and develop young Filipino leaders, end deforestation in Negros Occidental, and aid those who are in desperate need.</p>
         <hr>
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="example@mail.com" name="email" required>
+        <input type="email" id="email2" placeholder="example@mail.com" name="email" required>
         <label for="Name">Name</label>
-        <input id="Name" type="text" value="" name="Name" placeholder="(Last Name, First Name, Middle Initial)" required>
+        <input id="Name" type="text" value="" name="Name" placeholder="Last Name, First Name, Middle Initial" required>
         <label for="birthday">Date of Birth</label>
         <input type="date" id="birthday" name="birthday" required>
         <label for="Address">Address</label>
@@ -61,14 +66,10 @@
         <input type="tel" id="Contact" name="Contact" pattern="^(09|\+639)\d{9}$" required placeholder="Mobile Phone Number">
         <label for="Link">Facebook Name or Link</label>
         <input id="Link" type="text" value="" name="Link" placeholder="(Kindly put N/A if NOT APPLICABLE)" required>
-        <figcaption class ="figma">How to support a scholar:</figcaption>
-        <a href="https://bit.ly/SLMiPledge30" alt=""><img src="images/monthlypledge.jpg"></a>
-        <figcaption class ="figma">Donate to Legacy Home:</figcaption>
-        <a href="https://bit.ly/DonateToLegacyHome" alt=""><img src="images/legacy-home.jpg"></a>
-        <figcaption class ="figma">Share your Love, Build a Home:</figcaption>
-        <a href="https://bit.ly/DonateToLegacyHome" alt=""><img src="images/furniture-legacy.jpg"></a>
-        <input type="submit">
-        <input type="reset">
+
+        <!-- We can add something like: "Why do you want to join I Am A Legacy?" -->
+
+        <input id="join-now" type="submit" value="Join Now">
       </form>
   </section>
 
@@ -117,5 +118,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

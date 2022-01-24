@@ -1,0 +1,317 @@
+JUST HAVE THIS HERE IN CASE WE'LL NEED IT FOR SOME REASON
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>I Am A Legacy</title>
+	<meta charset="UTF-8">
+    <!--I add user-scalable = no so mobile devices view remove scrolling sideways-->
+	<meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+
+    <!-- W3 CSS -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Font Awesome!!! -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins&family=Raleway:wght@400;500;600;700&family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+    <section id="header">
+        <!-- Navbar -->
+        <!-- Note: can add styling in the navbar that highlights the current page the user is on -->
+        <div class="w3-top w3-mobile">
+            <div class="w3-bar w3-card w3-left-align w3-large">
+                <a class="w3-bar-item w3-button w3-hide-large w3-right w3-padding-48 w3-hover-white w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                
+                <a href="index.html"><img src="images/legacy-logo.jpg" id="logo" class="w3-bar-item" alt="logo"></a>
+                <a href="index-2.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">index-2</a>
+                <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">About Us</a>
+                <a href="involved.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Get Involved</a>
+                <a href="advocacy.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Our Advocacy</a>
+                <a href="signup.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white">Begin Your Legacy</a>
+                <a href="donate.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-padding-48 w3-hover-white w3-right">Donate</a>
+            </div>
+
+            <!-- Navbar on small screens -->
+            <div id="navMenu" class="w3-bar-block w3-white w3-hide w3-hide-large w3-large">
+                <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
+                <a href="involved.html" class="w3-bar-item w3-button w3-padding-large">Get Involved</a>
+                <a href="advocacy.html" class="w3-bar-item w3-button w3-padding-large">Our Advocacy</a>
+                <a href="signup.html" class="w3-bar-item w3-button w3-padding-large">Begin Your Legacy</a>
+                <a href="donate.html" class="w3-bar-item w3-button w3-padding-large">Donate</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-content w3-mobile">
+        <div id="slider">
+            <div class="overlay">
+                <!-- I just made this phrase up on the spot lmao we can change it to smthg better if ever -->
+                <!-- This quote can be replaced by smthg about "a legacy" or like the NGO's core catchphrase -->
+                <h1 class="w3-margin w3-jumbo">Our Planet Needs You</h1>
+                <p>Some inspirational follow-up text</p>
+                <!--  WE CAN PUT A RELATIVELY BIG BUTTON SOMEWHERE AROUND HERE AS THE "CALL TO ACTION" -->
+            </div>
+            <figure>
+                <!-- If we're using the quote "Our Planet Needs You," it might be better to use images of environmentally ravaged places -->
+                <!-- Also all these images are from unsplash.com, specifically the large versions-->
+                <img src="images/tropical.jpg" id="tropical" alt="tropical">
+                <img src="images/forest.jpg" alt="forest">
+                <img src="images/volcano.jpg" alt="volcano">
+                <img src="images/tropical.jpg" alt="tropical">
+            </figure>
+        </div>
+
+        <!-- First Grid -->
+        <div id="grid-1" class="w3-row-padding w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-twothird">
+                    <h1>The Youth Arm of Sowing Legacy Movement Inc.</h1>
+                    <hr>
+                    <h5 class="w3-padding-16">
+                        <p>I Am A Legacy is composed of graduates from the Sowing Legacy Movement, Inc. Legacy Camps.
+                        The Sowing Legacy Movement is a network of committed individuals working together to bring positive change through sowing and leaving legacies. It aims to empower children, youth, and communities by facilitating education, promote volunteerism, and inspire people to serve and to love.</p>
+                    </h5>
+                </div>
+                <div class="w3-third">
+                    <img class="w3-image" src="images/sowing-logo.png" alt="sowing-logo">
+                </div>
+            </div>
+            <!-- Idea: These images could be link to the media pages or smthg of Sowing Legacy  -->
+            <!-- Idea 2: Add hover effects for these images that give info when you hover over them -->
+            <div id="sowing-imgs" class="w3-content">
+                <div class="w3-half w3-display-container w3-container">
+                    <img src="images/legacy-2.jpeg" class="w3-image" alt="legacy-camp">
+                </div>
+                <div class="w3-half w3-display-container w3-container">
+                    <img src="images/legacy-1.jpeg" class="w3-image" alt="legacy-camp">
+                </div>
+            </div>
+        </div>
+
+        <section class="curved">
+            <div id="grid-2" class="w3-row-padding">
+                <div class="w3-content">
+
+                    <div id="advocacy" class="w3-row w3-display-container">
+                        <div class="gradient-overlay">
+                            <img class="img-panel" src="images/deforestation.jpg" alt="deforestation">
+                        </div>
+                        <!--  Note to self: make these responsive -->
+                        <div class="w3-display-topleft w3-container text-overlay clickable">
+                            <h1>Protect Our Forests</h1>
+                            <h3>Some follow-up text</h3>
+                            <div class="btn-1-container">
+                                <a href="advocacy.html" class="btn-1">Learn More<span></span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="events" class="w3-half w3-display-container">
+                        <div class="gradient-overlay">
+                            
+                            <img class="img-panel slide" src="images/save-forests.png" alt="save-forests">
+                            <img class="img-panel slide" src="images/legacy-4.jpg" alt="legacy-camp">
+                            <img class="img-panel slide" src="images/legacy-3.jpg" alt="community">
+                        </div>
+                        <div class="w3-display-middle text-overlay clickable">
+                            <h1>Join Our Events</h1>
+                            <div class="btn-1-container">
+                                <a href="involved.html" class="btn-1">Get involved<span></span></a>
+                            </div>
+                        </div>
+
+                        <!-- After thinking abt it for a while tbh i think i just wanna remove the carousel since it doesn't serve any purpose on the front page -->
+                        
+                        <button class="w3-button w3-display-left" onclick="moveDivs(-1)">&#10094;</button>
+                        <button style="right: 3.5%;" class="w3-button w3-display-right" onclick="moveDivs(+1)">&#10095;</button>
+
+                        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle">
+                            <span class="w3-badge carousel-dot w3-transparent w3-hover-white w3-white" onclick="currentDiv(1)"></span>
+                            <span class="w3-badge carousel-dot w3-transparent w3-hover-white w3-white" onclick="currentDiv(2)"></span>
+                            <span class="w3-badge carousel-dot w3-transparent w3-hover-white w3-white" onclick="currentDiv(3)"></span>
+                        </div>
+                    </div>
+
+                    <div id="donate" class="w3-half w3-display-container">
+                        <div class="gradient-overlay">
+                            <!-- Replace the image with another more fitting one? 
+                                 (such as showing image of kids receiving supplies or smthg)
+                                 something to elicit emotional reactions -->
+                            <img class="img-panel" src="images/donate.jpg" alt="donation">
+                        </div>
+                        <div class="w3-display-middle text-overlay clickable">
+                            <h1>Help Us Pay It Forward</h1>
+                            <div class="btn-1-container">
+                                <a href="donate.html" class="btn-1">Donate Now<span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+    </section>
+
+    <section id="footer">
+        <footer class="w3-container">
+            <div class="w3-content w3-row">
+                <div class="w3-quarter">
+                    <form action="#">
+                        <h6>Subscribe to the Legacy Newsletter </h6>
+                        <input class="w3-input" type="text" placeholder="Email">
+                        <input id="newsletter-submit" type="submit" value="Sign Up">
+                    </form>  
+                <div class="w3-content w3-row w3-content">
+                    <div class="social-icons">
+                        <div class="wrapper w3-padding-32">
+                            <div class="icon facebook">
+                                <div class="tooltip">Facebook</div>
+                                <span><i class="fab fa-facebook-f"></i></span>
+                            </div>
+                            <div class="icon twitter">
+                                <div class="tooltip">Twitter</div>
+                                <span><i class="fab fa-twitter"></i></span>
+                            </div>
+                            <div class="icon instagram">
+                                <div class="tooltip">Instagram</div>
+                                <span><i class="fab fa-instagram"></i></span>
+                            </div>
+                            <div class="icon youtube">
+                                <div class="tooltip">Youtube</div>
+                                <span><i class="fab fa-youtube"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="w3-quarter">
+                    <h5>About Us</h5>
+                    <h5>Donate</h5>
+                </div>
+                <div class="w3-quarter">
+                    <h5>Get Involved</h5>
+                    <h5>Begin Your Legacy</h5>
+                </div>
+                <div class="w3-quarter">
+                    <h5>Our Advocacy</h5>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+THIS IS THE PLANT A TREE DONATION CARD THAT WILL TEMPORARILY BE REMOVED SINCE THERE'S NOT ENOUGH TIME TO DESIGN THE donate.html page and implement the required javascript to switch donation types dynamically or smthg
+
+<div class="container-overlap flex-center w3-padding-32">
+    <div id="tree-left" class="bg-white container-padding container-shadow donate-padding responsive-width">
+        <div class="w3-row">
+            <div class="w3-col l6 m6 s6 w3-center">
+                <h3 class="active" data-donation-type="tree" data-donation-interval="once-tree">One-time<hr class="interval-hr"></h3>
+            </div>
+            <div class="w3-col l6 m6 s6 w3-center">
+                <h3 class="inactive" data-donation-type="tree" data-donation-interval="monthly-tree">Monthly<hr class="interval-hr"></h3>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col"><h2 class="index-heading w3-center">Plant a Tree</h2></div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l6 m12">
+                <div class="donate-option inactive" data-donation-type="tree">
+                    <div class="flex-2 flex-center flex-column">
+                        <img class="donate-icon" src="icons/sprout.png" alt="sprout">
+                    </div>
+                    <div class="flex-3 flex-center flex-column">
+                        <h5 class="donate-info no-margin">We can grow <b>2</b> trees</h5>
+                        <h2 class="denomination no-margin">₱500</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l6 m12">
+                <div class="donate-option inactive" data-donation-type="tree">
+                    <div class="flex-2 flex-center flex-column">
+                        <img class="donate-icon" src="icons/plant.png" alt="plant">
+                    </div>
+                    <div class="flex-3 flex-center flex-column">
+                        <h5 class="donate-info no-margin">We can grow <b>4</b> trees</h5>
+                        <h2 class="denomination no-margin">₱1000</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l6 m12">
+                <div class="donate-option inactive" data-donation-type="tree">
+                    <div class="flex-2 flex-center flex-column">
+                        <img class="donate-icon" src="icons/trees.png" alt="trees">
+                    </div>
+                    <div class="flex-3 flex-center flex-column">
+                        <h5 class="donate-info no-margin">We can grow <b>20</b> trees</h5>
+                        <h2 class="denomination no-margin">₱5000</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col l6 m12">
+                <div class="donate-option inactive" data-donation-type="tree">
+                    <div class="flex-2 flex-center flex-column">
+                        <img class="donate-icon" src="icons/forest.png" alt="forest">
+                    </div>
+                    <div class="flex-3 flex-center flex-column">
+                        <h5 class="donate-info no-margin">Grow as <b>many</b> trees as you wish</h5>
+                        <h2 class="denomination no-margin">Other</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l3 hidden-text">.</div>
+            <div class="w3-col l6">
+                <a class="card-btn-donate" href="donate.html">DONATE</a>
+            </div>
+            <div class="w3-col l3 hidden-text">.</div>
+        </div>
+    </div>
+    <div id="tree-right" class="responsive-width">
+        <img src="images/sapling.jpg" class="donate-img img-shadow img-overlap img-overlap-right" alt="sapling">
+    </div>
+</div>
+
+                <div class="core-padding w3-row">
+                    <div class="w3-center">
+                        <div class="core-card width-90-center flex-center flex-column container-shadow bg-white">
+                            <img class="core-icon" src="icons/vision.png" alt="vision">
+                            <h1 class="no-margin">Vision</h1>
+                            <p class="no-margin">To leave a long-lasting legacy of environmentally conscious, socially responsible, and empowered youth across the Philippines and beyond. </p>
+                        </div>
+                    </div>
+                    <div class="w3-center">
+                        <div class="core-card width-90-center flex-center flex-column container-shadow bg-white">
+                            <img class="core-icon" src="icons/values.png" alt="values">
+                            <h1 class="no-margin">Values</h1>
+                            <p class="no-margin">I Am A Legacy stands by the following core values: Youth Empowerment, Advocacy Building, Community Service, and Volunteerism.</p>
+                        </div>
+                    </div>
+                    <div class="w3-center">
+                        <div class="core-card width-90-center flex-center flex-column container-shadow bg-white">
+                            <img class="core-icon" src="icons/mission.png" alt="mission">
+                            <h1 class="no-margin">Mission</h1>
+                            <p class="no-margin">To develop the youth into innovative, moral, responsible, and civic-minded leaders who contribute positively to communities and the environment on both a local and a global scale.</p>
+                        </div>
+                    </div>
+                </div>
