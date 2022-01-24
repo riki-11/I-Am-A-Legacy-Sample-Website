@@ -291,3 +291,27 @@ THIS IS THE PLANT A TREE DONATION CARD THAT WILL TEMPORARILY BE REMOVED SINCE TH
         <img src="images/sapling.jpg" class="donate-img img-shadow img-overlap img-overlap-right" alt="sapling">
     </div>
 </div>
+
+                <div class="core-padding w3-row">
+                    <div class="w3-center">
+                        <div class="core-card width-90-center flex-center flex-column container-shadow bg-white">
+                            <img class="core-icon" src="icons/vision.png" alt="vision">
+                            <h1 class="no-margin">Vision</h1>
+                            <p class="no-margin">To leave a long-lasting legacy of environmentally conscious, socially responsible, and empowered youth across the Philippines and beyond. </p>
+                        </div>
+                    </div>
+                    <div class="w3-center">
+                        <div class="core-card width-90-center flex-center flex-column container-shadow bg-white">
+                            <img class="core-icon" src="icons/values.png" alt="values">
+                            <h1 class="no-margin">Values</h1>
+                            <p class="no-margin">I Am A Legacy stands by the following core values: Youth Empowerment, Advocacy Building, Community Service, and Volunteerism.</p>
+                        </div>
+                    </div>
+                    <div class="w3-center">
+                        <div class="core-card width-90-center flex-center flex-column container-shadow bg-white">
+                            <img class="core-icon" src="icons/mission.png" alt="mission">
+                            <h1 class="no-margin">Mission</h1>
+                            <p class="no-margin">To develop the youth into innovative, moral, responsible, and civic-minded leaders who contribute positively to communities and the environment on both a local and a global scale.</p>
+                        </div>
+                    </div>
+                </div>
