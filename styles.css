@@ -552,7 +552,7 @@ input[type=reset]{
 }
 
 #l-name, label[for="l-name"] {
-    width: 80%;
+    width: 90%;
     margin-left: auto;
 }
 
@@ -731,14 +731,14 @@ footer {
     padding-top: 40px !important;
 }
 
-footer h5 {
-    margin: 10px 1.2em;
-}
-
 footer input {
     margin: 5px 0;
     border-radius: 4px;
     font-size: 14px;
+}
+
+footer .w3-row {
+    margin-bottom: 10px;
 }
 
 #newsletter-submit {
@@ -760,10 +760,13 @@ footer input {
     color: #151F90;
 }
 
+.footer-link:hover {
+  text-decoration: underline;
+}
+
 .social-icons {
     display: grid;
     align-content: center;
-    justify-items: center;
     outline: none !important;
     -webkit-tap-highlight-color: transparent;
 }
@@ -866,11 +869,6 @@ footer input {
   color: #ffffff;
 }
 
-.Vid-Title,.Vid-Desc{
-  text-align: center;
-}
-
-
 .main-advocacy{
     text-align: center;
     padding-top: 180px;
@@ -922,71 +920,6 @@ footer input {
 
 .aspect-content{
   flex-basis: 100%;
-}
-
-.stat{
-  text-align: center;
-  padding-top: 64px;
-  padding-bottom: 128px;
-  /*placeholder */
-  background-image: url("images/volcano.jpg");
-  box-shadow:inset 0 0 0 2000px rgba(100, 100, 100, 0.589);
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  background-position: center;
-}
-
-.data-row{
-  min-height: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: stretch;
-  flex-wrap: wrap;
-  display: flex; 
-  justify-content: space-between;
-  padding-top: 24px;
-  width: 80%;
-}
-
-.data-content{
-  margin-right: 30px;
-  margin-left: 30px;
-  flex: 1;
-}
-
-.title{
-  color: #195BF2;
-  display: inline-block;
-}
-
-.title:after {
-    content: '';
-    display: block;
-    border-top: 6px solid rgb(179, 179, 179);
-    margin-top: 0.5em;
-}
-
-.data-title{
-    font-weight: 600;
-    color: navy;
-    flex: 1;
-}
-
-.data-quant{
-    flex:1;
-}
-
-#banner-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner-box{
-    margin: auto;
-    width: 50%;
 }
 
 .advocacy-part2 {
@@ -1060,19 +993,27 @@ footer input {
   justify-content: flex-start;
 }
 
+.reference-list {
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.apa-reference {
+  padding-left: 10px;
+  text-indent: -10px;
+}
+
+.apa-one-line {
+    align-self: flex-start;
+}
+
 /* CSS for about.html page */
 #about-content {
     background: linear-gradient(90deg, rgba(19,54,74,1) 0%, 
     rgba(28,78,105,1) 54%, rgba(25,59,84,1) 100%);
 }
 
-/*
-#about-content h1 {
-    color: #163DA6;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    font-size: 45px;
-}
-*/
 #about-content section {
     padding-top: 64px;
 }
@@ -1087,7 +1028,8 @@ footer input {
 
 .core-card {
     padding: 2%;
-    min-height: 100%;
+    /*min-height: 100%;*/
+    min-height: 426px;
     margin-bottom: 3%;
     flex: 1;
 }
@@ -1208,13 +1150,25 @@ footer input {
   text-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
 }
 
-#ticket-date{
+.ticket-date, .ticket-location {
   font-weight: 300;
-  line-height: 24px;
-  margin: 0 0 30px 0;
 }
 
-#ticket-des{
+.ticket-date {
+  line-height: 24px;
+}
+
+.ticket-location {
+  opacity: 0.8;
+  font-size: 20px;
+  margin: 10px 0 15px;
+}
+
+.ticket-location i {
+  padding: 5px;
+}
+
+.ticket-des {
   margin: 0 0 30px 0;
 }
 
@@ -1520,7 +1474,11 @@ footer input {
         text-align: center;
     }
 
-    .main-signup-page .form-signup img{
+    .social-icons {
+        justify-content: center;
+    }
+
+    .main-signup-page .form-signup img {
         height: 200%;
     }
 
@@ -1540,13 +1498,16 @@ footer input {
         align-items: center;
     }
 
+    .apa-reference {
+        text-align: left;
+    }
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 840px) and (orientation: portrait){
   .btn-2-container {
     margin: auto;
   }
-
 
   .grid-text {
     text-align: center;
@@ -1691,7 +1652,7 @@ footer input {
   }
 
   .ticket-image{
-    height: 470px;
+    height: 480px;
     min-width: 500px;
   }
   
@@ -1724,6 +1685,10 @@ footer input {
 
     .matters-card-img {
         max-height: 400px;
+    }
+
+    .reference-list {
+        width: 80%;
     }
 }
 
